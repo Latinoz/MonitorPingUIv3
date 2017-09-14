@@ -106,10 +106,10 @@ namespace MonitorPingUI
 
             else
             {
-                PingClass objectPing = new PingClass();
+                PingClass objectPing1 = new PingClass();
                 while (true)
                 {
-                    IPOutputAnswer1.Text = await objectPing.DoPingThreadAsync(IPadressBox.Text);      // Пингуем хост и выводим значение           
+                    IPOutputAnswer1.Text = await objectPing1.DoPingThreadAsync(IPadressBox1.Text);      // Пингуем хост и выводим значение           
                 }
             }
         }
