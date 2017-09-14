@@ -11,7 +11,7 @@ using System.Net.NetworkInformation;
 
         //Ping pingSender = new Ping();
 
-        //public int n;                                       //переменная для подсчета количества icmp запросов
+        public int n;                                       //переменная для подсчета количества icmp запросов
 
         public string outAnswer;                              //переменная вывода сообщения в окно "вывода"
 
@@ -30,11 +30,11 @@ using System.Net.NetworkInformation;
               
                 PingReply reply;
 
-                while (true)
-                //while(n < 6)
+                //while (true)
+                while(n < 10)
 
                 {
-                    //n++;
+                    n++;
 
                     if (cancelCycle == true)
 
@@ -60,8 +60,8 @@ using System.Net.NetworkInformation;
                         //IPOutputAnswer.BackColor = Color.Gray;
                         //string backColor = "Color.Gray";
                         //IPOutputAnswer.Text = "ICMP ответ получен - " + n + " Раз" + '\n';
-                        //outAnswer = "ICMP ответ получен - " + n + " Раз" + '\n';
-                        outAnswer = "ICMP ответ получен";
+                        outAnswer = "ICMP ответ получен - " + n + " Раз" + '\n';
+                        //outAnswer = "ICMP ответ получен";
                         
                         }
 
