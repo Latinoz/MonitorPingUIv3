@@ -15,8 +15,6 @@ using System.Net.NetworkInformation;
 
         public string outAnswer;                              //переменная вывода сообщения в окно "вывода"
 
-        //public string outAnswerNo;
-
         public string notCorrectAddress;
         
         public bool cancelCycle = false;                            //переменная отключения цикла (кнопка Stop)
