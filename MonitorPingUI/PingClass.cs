@@ -11,13 +11,13 @@ using System.Net.NetworkInformation;
 
         //Ping pingSender = new Ping();
 
-     public int n;                                       //переменная для подсчета количества icmp запросов
+        public int n;                                       //переменная для подсчета количества icmp запросов
 
-     public string outAnswer;                              //переменная вывода сообщения в окно "вывода"
+        public string outAnswer;                              //переменная вывода сообщения в окно "вывода"
 
-     public string notCorrectAddress;
+        public string notCorrectAddress;
 
-     public bool cancelCycle = false;                            //переменная отключения цикла (кнопка Stop)
+        public bool cancelCycle = false;                            //переменная отключения цикла (кнопка Stop)
      
 
         public async Task<string> DoPingThreadAsync(string address)     //Метод отправки icmp запросов в цикле
@@ -32,7 +32,7 @@ using System.Net.NetworkInformation;
                 PingReply reply;
 
                 //while (true)
-                while(n < 10)
+                while(n < 30)
 
                 {
                     n++;
@@ -73,7 +73,6 @@ using System.Net.NetworkInformation;
                         //IPOutputAnswer.BackColor = Color.Red;
                         //IPOutputAnswer.Text = "Ping'a нет!";
                         //outAnswerNo = "Ping'a нет!";
-                        
                         outAnswer = "no";
 
                         }
