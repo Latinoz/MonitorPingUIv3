@@ -11,13 +11,14 @@ using System.Net.NetworkInformation;
 
         //Ping pingSender = new Ping();
 
-        public int n;                                       //переменная для подсчета количества icmp запросов
+     public int n;                                       //переменная для подсчета количества icmp запросов
 
-        public string outAnswer;                              //переменная вывода сообщения в окно "вывода"
+     public string outAnswer;                              //переменная вывода сообщения в окно "вывода"
 
-        public string notCorrectAddress;
-        
-        public bool cancelCycle = false;                            //переменная отключения цикла (кнопка Stop)
+     public string notCorrectAddress;
+
+     public bool cancelCycle = false;                            //переменная отключения цикла (кнопка Stop)
+     
 
         public async Task<string> DoPingThreadAsync(string address)     //Метод отправки icmp запросов в цикле
         {
@@ -87,8 +88,9 @@ using System.Net.NetworkInformation;
 
             catch (PingException)
             {
-                //DataTextFromIP.Text = "Некорректный ip адрес!";
-                notCorrectAddress = "error";
+            //DataTextFromIP.Text = "Некорректный ip адрес!";
+            //notCorrectAddress = "error";
+            outAnswer = "Некорректный ip адрес!";
             }
 
         return outAnswer;

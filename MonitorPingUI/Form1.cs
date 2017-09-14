@@ -6,12 +6,10 @@ namespace MonitorPingUI
 {
     public partial class MainForm : Form
     {
-        
-        //static private void SetCancelTrue()
+       
         private void SetCancelTrue()               //Метод присваивания переменной, для блокировки 
         {
             PingClass objectPing = new PingClass();
-            //cancelCycle = true;
             objectPing.cancelCycle = true;
 
         }
