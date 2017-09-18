@@ -38,7 +38,7 @@ namespace MonitorPingUI
 
             if (String.IsNullOrEmpty(IPadressBox.Text))
             {
-                DataTextFromIP.Text = "Введите ip адрес";
+                DataTextFromIP.Text = "Enter ip address";
             }
 
             else
@@ -71,22 +71,7 @@ namespace MonitorPingUI
         {
             
         }
-
-        private void buttonReset_Click(object sender, EventArgs e)
-        {
-            //cancelCycle = false;               //Сброс переменной, для остановки цикла в начальное значение  
-            PingClass objectPing = new PingClass();
-            objectPing.cancelCycle = false;
-
-            IPadressBox.ResetText();           //Сбросить значения окна ввода ip адреса
-
-            DataTextFromIP.ResetText();        //Сбросить значения окна вывода информации
-
-            IPOutputAnswer.ResetText();        //Сбросить значения окна вывода окна дополнительной информации
-
-        }
-
-
+ 
         private void MainForm_Load(object sender, EventArgs e)
         {
 
@@ -108,7 +93,7 @@ namespace MonitorPingUI
 
             if (String.IsNullOrEmpty(IPadressBox1.Text))
             {
-                DataTextFromIP1.Text = "Введите ip адрес";
+                DataTextFromIP1.Text = "Enter ip address";
             }
 
             else
@@ -153,7 +138,7 @@ namespace MonitorPingUI
 
             if (String.IsNullOrEmpty(IPadressBox2.Text))
             {
-                DataTextFromIP2.Text = "Введите ip адрес";
+                DataTextFromIP2.Text = "Enter ip address";
             }
 
             else
@@ -198,7 +183,7 @@ namespace MonitorPingUI
 
             if (String.IsNullOrEmpty(IPadressBox3.Text))
             {
-                DataTextFromIP3.Text = "Введите ip адрес";
+                DataTextFromIP3.Text = "Enter ip address";
             }
 
             else
@@ -243,7 +228,7 @@ namespace MonitorPingUI
 
             if (String.IsNullOrEmpty(IPadressBox4.Text))
             {
-                DataTextFromIP4.Text = "Введите ip адрес";
+                DataTextFromIP4.Text = "Enter ip address";
             }
 
             else
@@ -269,6 +254,21 @@ namespace MonitorPingUI
 
         private void DataTextFromIP4_Click(object sender, EventArgs e)
         {
+
+        }
+
+
+        private void buttonReset_Click(object sender, EventArgs e)
+        {
+            //cancelCycle = false;               //Сброс переменной, для остановки цикла в начальное значение  
+            PingClass objectPing = new PingClass();
+            objectPing.cancelCycle = false;
+
+            IPadressBox.ResetText();           //Сбросить значения окна ввода ip адреса
+
+            DataTextFromIP.ResetText();        //Сбросить значения окна вывода информации
+
+            IPOutputAnswer.ResetText();        //Сбросить значения окна вывода окна дополнительной информации
 
         }
     }

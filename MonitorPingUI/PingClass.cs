@@ -44,7 +44,7 @@ public class PingClass
                         //IPOutputAnswer.BackColor = Color.Gray;
                         //string backColor = "Color.Gray";
                         //IPOutputAnswer.Text = "ICMP ответ получен - " + n + " Раз" + '\n';
-                        outAnswer = "ICMP ответ получен - " + n + " Раз" + '\n';
+                        outAnswer = "ICMP answer received - " + n + " times" + '\n';
                         //outAnswer = "ICMP ответ получен";
 
                     }
@@ -56,7 +56,7 @@ public class PingClass
                         //IPOutputAnswer.BackColor = Color.Red;
                         //IPOutputAnswer.Text = "Ping'a нет!";
                         //outAnswerNo = "Ping'a нет!";
-                        outAnswer = "Хост не доступен!";
+                        outAnswer = "Host is not available!";
 
                     }
 

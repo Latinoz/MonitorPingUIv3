@@ -69,7 +69,7 @@
             // 
             this.IPOutputAnswer.AutoSize = true;
             this.IPOutputAnswer.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.IPOutputAnswer.Location = new System.Drawing.Point(199, 27);
+            this.IPOutputAnswer.Location = new System.Drawing.Point(194, 27);
             this.IPOutputAnswer.Name = "IPOutputAnswer";
             this.IPOutputAnswer.Size = new System.Drawing.Size(0, 13);
             this.IPOutputAnswer.TabIndex = 1;
@@ -128,7 +128,7 @@
             // 
             this.IPOutputAnswer1.AutoSize = true;
             this.IPOutputAnswer1.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.IPOutputAnswer1.Location = new System.Drawing.Point(199, 68);
+            this.IPOutputAnswer1.Location = new System.Drawing.Point(194, 68);
             this.IPOutputAnswer1.Name = "IPOutputAnswer1";
             this.IPOutputAnswer1.Size = new System.Drawing.Size(0, 13);
             this.IPOutputAnswer1.TabIndex = 7;
@@ -177,7 +177,7 @@
             // 
             this.IPOutputAnswer2.AutoSize = true;
             this.IPOutputAnswer2.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.IPOutputAnswer2.Location = new System.Drawing.Point(199, 110);
+            this.IPOutputAnswer2.Location = new System.Drawing.Point(194, 110);
             this.IPOutputAnswer2.Name = "IPOutputAnswer2";
             this.IPOutputAnswer2.Size = new System.Drawing.Size(0, 13);
             this.IPOutputAnswer2.TabIndex = 12;
@@ -246,7 +246,7 @@
             // 
             this.IPOutputAnswer3.AutoSize = true;
             this.IPOutputAnswer3.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.IPOutputAnswer3.Location = new System.Drawing.Point(199, 151);
+            this.IPOutputAnswer3.Location = new System.Drawing.Point(194, 151);
             this.IPOutputAnswer3.Name = "IPOutputAnswer3";
             this.IPOutputAnswer3.Size = new System.Drawing.Size(0, 13);
             this.IPOutputAnswer3.TabIndex = 17;
@@ -295,7 +295,7 @@
             // 
             this.IPOutputAnswer4.AutoSize = true;
             this.IPOutputAnswer4.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.IPOutputAnswer4.Location = new System.Drawing.Point(198, 193);
+            this.IPOutputAnswer4.Location = new System.Drawing.Point(193, 193);
             this.IPOutputAnswer4.Name = "IPOutputAnswer4";
             this.IPOutputAnswer4.Size = new System.Drawing.Size(0, 13);
             this.IPOutputAnswer4.TabIndex = 22;
