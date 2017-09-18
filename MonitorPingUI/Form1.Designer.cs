@@ -49,6 +49,11 @@
             this.buttonStart3 = new System.Windows.Forms.Button();
             this.IPOutputAnswer3 = new System.Windows.Forms.Label();
             this.IPadressBox3 = new System.Windows.Forms.TextBox();
+            this.DataTextFromIP4 = new System.Windows.Forms.Label();
+            this.buttonStop5 = new System.Windows.Forms.Button();
+            this.buttonStart4 = new System.Windows.Forms.Button();
+            this.IPOutputAnswer4 = new System.Windows.Forms.Label();
+            this.IPadressBox4 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // IPadressBox
@@ -257,11 +262,65 @@
             this.IPadressBox3.Text = "127.0.0.1";
             this.IPadressBox3.TextChanged += new System.EventHandler(this.IPadressBox3_TextChanged);
             // 
+            // DataTextFromIP4
+            // 
+            this.DataTextFromIP4.AutoSize = true;
+            this.DataTextFromIP4.Location = new System.Drawing.Point(14, 212);
+            this.DataTextFromIP4.Name = "DataTextFromIP4";
+            this.DataTextFromIP4.Size = new System.Drawing.Size(0, 13);
+            this.DataTextFromIP4.TabIndex = 25;
+            this.DataTextFromIP4.Click += new System.EventHandler(this.DataTextFromIP4_Click);
+            // 
+            // buttonStop5
+            // 
+            this.buttonStop5.Location = new System.Drawing.Point(451, 187);
+            this.buttonStop5.Name = "buttonStop5";
+            this.buttonStop5.Size = new System.Drawing.Size(94, 21);
+            this.buttonStop5.TabIndex = 24;
+            this.buttonStop5.Text = "Stop";
+            this.buttonStop5.UseVisualStyleBackColor = true;
+            this.buttonStop5.Click += new System.EventHandler(this.buttonStop5_Click);
+            // 
+            // buttonStart4
+            // 
+            this.buttonStart4.Location = new System.Drawing.Point(351, 187);
+            this.buttonStart4.Name = "buttonStart4";
+            this.buttonStart4.Size = new System.Drawing.Size(94, 21);
+            this.buttonStart4.TabIndex = 23;
+            this.buttonStart4.Text = "Start";
+            this.buttonStart4.UseVisualStyleBackColor = true;
+            this.buttonStart4.Click += new System.EventHandler(this.buttonStart4_Click);
+            // 
+            // IPOutputAnswer4
+            // 
+            this.IPOutputAnswer4.AutoSize = true;
+            this.IPOutputAnswer4.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.IPOutputAnswer4.Location = new System.Drawing.Point(198, 193);
+            this.IPOutputAnswer4.Name = "IPOutputAnswer4";
+            this.IPOutputAnswer4.Size = new System.Drawing.Size(0, 13);
+            this.IPOutputAnswer4.TabIndex = 22;
+            this.IPOutputAnswer4.Tag = "";
+            this.IPOutputAnswer4.Click += new System.EventHandler(this.IPOutputAnswer4_Click);
+            // 
+            // IPadressBox4
+            // 
+            this.IPadressBox4.Location = new System.Drawing.Point(11, 188);
+            this.IPadressBox4.Name = "IPadressBox4";
+            this.IPadressBox4.Size = new System.Drawing.Size(175, 20);
+            this.IPadressBox4.TabIndex = 21;
+            this.IPadressBox4.Text = "127.0.0.1";
+            this.IPadressBox4.TextChanged += new System.EventHandler(this.IPadressBox4_TextChanged);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(554, 261);
+            this.Controls.Add(this.DataTextFromIP4);
+            this.Controls.Add(this.buttonStop5);
+            this.Controls.Add(this.buttonStart4);
+            this.Controls.Add(this.IPOutputAnswer4);
+            this.Controls.Add(this.IPadressBox4);
             this.Controls.Add(this.DataTextFromIP3);
             this.Controls.Add(this.buttonStop4);
             this.Controls.Add(this.buttonStart3);
@@ -314,5 +373,10 @@
         private System.Windows.Forms.Button buttonStart3;
         private System.Windows.Forms.Label IPOutputAnswer3;
         private System.Windows.Forms.TextBox IPadressBox3;
+        private System.Windows.Forms.Label DataTextFromIP4;
+        private System.Windows.Forms.Button buttonStop5;
+        private System.Windows.Forms.Button buttonStart4;
+        private System.Windows.Forms.Label IPOutputAnswer4;
+        private System.Windows.Forms.TextBox IPadressBox4;
     }
 }

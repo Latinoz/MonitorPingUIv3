@@ -6,13 +6,15 @@ namespace MonitorPingUI
 {
     public partial class MainForm : Form
     {
-        public bool x = false;
-
+        public bool x = false;                            //Объявление переменной для остановки цикла выполнения мониторинга
+                                                          //одной из форм
         public bool x1 = false;
 
         public bool x2 = false;
 
         public bool x3 = false;
+
+        public bool x4 = false;
 
         public MainForm()
         {
@@ -61,9 +63,8 @@ namespace MonitorPingUI
 
         private void buttonStop_Click(object sender, EventArgs e)
         {
-            x = true;
-            //SetCancelTrue();                  //Остановить цикл отправки ICMP запросов
-
+            x = true;                    //Остановить цикл отправки ICMP запросов
+        
         }
 
         private void DataTextFromIP_Click(object sender, EventArgs e)
@@ -129,7 +130,6 @@ namespace MonitorPingUI
         private void buttonStop2_Click(object sender, EventArgs e)
         {
             x1 = true;
-            //SetCancelTrue();                  //Остановить цикл отправки ICMP запросов
         }
         
         private void DataTextFromIP1_Click(object sender, EventArgs e)
@@ -223,6 +223,51 @@ namespace MonitorPingUI
         }
 
         private void DataTextFromIP3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void IPadressBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void IPOutputAnswer4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private async void buttonStart4_Click(object sender, EventArgs e)
+        {
+            x4 = false;
+
+            if (String.IsNullOrEmpty(IPadressBox4.Text))
+            {
+                DataTextFromIP4.Text = "Введите ip адрес";
+            }
+
+            else
+            {
+                PingClass objectPing4 = new PingClass();
+                while (true)
+
+                    if (x4 == true)
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        IPOutputAnswer4.Text = await objectPing4.DoPingThreadAsync(IPadressBox4.Text);      // Пингуем хост и выводим значение           
+                    }
+            }
+        }
+
+        private void buttonStop5_Click(object sender, EventArgs e)
+        {
+            x4 = true;
+        }
+
+        private void DataTextFromIP4_Click(object sender, EventArgs e)
         {
 
         }
