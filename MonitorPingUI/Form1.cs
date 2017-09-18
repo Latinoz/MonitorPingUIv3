@@ -91,9 +91,9 @@ namespace MonitorPingUI
         {
             x1 = false;
 
-            if (String.IsNullOrEmpty(IPadressBox1.Text))
+            if (String.IsNullOrEmpty(IPadressBox1.Text))                   //Проверка на пустое поле
             {
-                DataTextFromIP1.Text = "Enter ip address";
+                DataTextFromIP1.Text = "Enter ip address";                 
             }
 
             else

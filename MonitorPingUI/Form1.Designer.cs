@@ -69,7 +69,7 @@
             // 
             this.IPOutputAnswer.AutoSize = true;
             this.IPOutputAnswer.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.IPOutputAnswer.Location = new System.Drawing.Point(194, 27);
+            this.IPOutputAnswer.Location = new System.Drawing.Point(192, 27);
             this.IPOutputAnswer.Name = "IPOutputAnswer";
             this.IPOutputAnswer.Size = new System.Drawing.Size(0, 13);
             this.IPOutputAnswer.TabIndex = 1;
@@ -78,7 +78,7 @@
             // 
             // buttonStart
             // 
-            this.buttonStart.Location = new System.Drawing.Point(352, 23);
+            this.buttonStart.Location = new System.Drawing.Point(354, 23);
             this.buttonStart.Name = "buttonStart";
             this.buttonStart.Size = new System.Drawing.Size(94, 21);
             this.buttonStart.TabIndex = 2;
@@ -88,7 +88,7 @@
             // 
             // buttonStop
             // 
-            this.buttonStop.Location = new System.Drawing.Point(452, 23);
+            this.buttonStop.Location = new System.Drawing.Point(454, 23);
             this.buttonStop.Name = "buttonStop";
             this.buttonStop.Size = new System.Drawing.Size(94, 21);
             this.buttonStop.TabIndex = 3;
@@ -107,7 +107,7 @@
             // 
             // buttonReset
             // 
-            this.buttonReset.Location = new System.Drawing.Point(452, 225);
+            this.buttonReset.Location = new System.Drawing.Point(454, 225);
             this.buttonReset.Name = "buttonReset";
             this.buttonReset.Size = new System.Drawing.Size(94, 21);
             this.buttonReset.TabIndex = 5;
@@ -128,7 +128,7 @@
             // 
             this.IPOutputAnswer1.AutoSize = true;
             this.IPOutputAnswer1.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.IPOutputAnswer1.Location = new System.Drawing.Point(194, 68);
+            this.IPOutputAnswer1.Location = new System.Drawing.Point(192, 68);
             this.IPOutputAnswer1.Name = "IPOutputAnswer1";
             this.IPOutputAnswer1.Size = new System.Drawing.Size(0, 13);
             this.IPOutputAnswer1.TabIndex = 7;
@@ -146,7 +146,7 @@
             // 
             // buttonStart1
             // 
-            this.buttonStart1.Location = new System.Drawing.Point(352, 64);
+            this.buttonStart1.Location = new System.Drawing.Point(354, 64);
             this.buttonStart1.Name = "buttonStart1";
             this.buttonStart1.Size = new System.Drawing.Size(94, 21);
             this.buttonStart1.TabIndex = 9;
@@ -156,7 +156,7 @@
             // 
             // buttonStop2
             // 
-            this.buttonStop2.Location = new System.Drawing.Point(452, 64);
+            this.buttonStop2.Location = new System.Drawing.Point(454, 64);
             this.buttonStop2.Name = "buttonStop2";
             this.buttonStop2.Size = new System.Drawing.Size(94, 21);
             this.buttonStop2.TabIndex = 10;
@@ -177,7 +177,7 @@
             // 
             this.IPOutputAnswer2.AutoSize = true;
             this.IPOutputAnswer2.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.IPOutputAnswer2.Location = new System.Drawing.Point(194, 110);
+            this.IPOutputAnswer2.Location = new System.Drawing.Point(192, 110);
             this.IPOutputAnswer2.Name = "IPOutputAnswer2";
             this.IPOutputAnswer2.Size = new System.Drawing.Size(0, 13);
             this.IPOutputAnswer2.TabIndex = 12;
@@ -186,7 +186,7 @@
             // 
             // buttonStart2
             // 
-            this.buttonStart2.Location = new System.Drawing.Point(352, 104);
+            this.buttonStart2.Location = new System.Drawing.Point(354, 104);
             this.buttonStart2.Name = "buttonStart2";
             this.buttonStart2.Size = new System.Drawing.Size(94, 21);
             this.buttonStart2.TabIndex = 13;
@@ -196,7 +196,7 @@
             // 
             // buttonStop3
             // 
-            this.buttonStop3.Location = new System.Drawing.Point(452, 104);
+            this.buttonStop3.Location = new System.Drawing.Point(454, 104);
             this.buttonStop3.Name = "buttonStop3";
             this.buttonStop3.Size = new System.Drawing.Size(94, 21);
             this.buttonStop3.TabIndex = 14;
@@ -224,7 +224,7 @@
             // 
             // buttonStop4
             // 
-            this.buttonStop4.Location = new System.Drawing.Point(452, 145);
+            this.buttonStop4.Location = new System.Drawing.Point(454, 145);
             this.buttonStop4.Name = "buttonStop4";
             this.buttonStop4.Size = new System.Drawing.Size(94, 21);
             this.buttonStop4.TabIndex = 19;
@@ -234,7 +234,7 @@
             // 
             // buttonStart3
             // 
-            this.buttonStart3.Location = new System.Drawing.Point(352, 145);
+            this.buttonStart3.Location = new System.Drawing.Point(354, 145);
             this.buttonStart3.Name = "buttonStart3";
             this.buttonStart3.Size = new System.Drawing.Size(94, 21);
             this.buttonStart3.TabIndex = 18;
@@ -246,7 +246,7 @@
             // 
             this.IPOutputAnswer3.AutoSize = true;
             this.IPOutputAnswer3.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.IPOutputAnswer3.Location = new System.Drawing.Point(194, 151);
+            this.IPOutputAnswer3.Location = new System.Drawing.Point(192, 151);
             this.IPOutputAnswer3.Name = "IPOutputAnswer3";
             this.IPOutputAnswer3.Size = new System.Drawing.Size(0, 13);
             this.IPOutputAnswer3.TabIndex = 17;
@@ -273,7 +273,7 @@
             // 
             // buttonStop5
             // 
-            this.buttonStop5.Location = new System.Drawing.Point(451, 187);
+            this.buttonStop5.Location = new System.Drawing.Point(453, 187);
             this.buttonStop5.Name = "buttonStop5";
             this.buttonStop5.Size = new System.Drawing.Size(94, 21);
             this.buttonStop5.TabIndex = 24;
@@ -283,7 +283,7 @@
             // 
             // buttonStart4
             // 
-            this.buttonStart4.Location = new System.Drawing.Point(351, 187);
+            this.buttonStart4.Location = new System.Drawing.Point(353, 187);
             this.buttonStart4.Name = "buttonStart4";
             this.buttonStart4.Size = new System.Drawing.Size(94, 21);
             this.buttonStart4.TabIndex = 23;
@@ -295,7 +295,7 @@
             // 
             this.IPOutputAnswer4.AutoSize = true;
             this.IPOutputAnswer4.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.IPOutputAnswer4.Location = new System.Drawing.Point(193, 193);
+            this.IPOutputAnswer4.Location = new System.Drawing.Point(191, 193);
             this.IPOutputAnswer4.Name = "IPOutputAnswer4";
             this.IPOutputAnswer4.Size = new System.Drawing.Size(0, 13);
             this.IPOutputAnswer4.TabIndex = 22;
