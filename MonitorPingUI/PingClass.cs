@@ -2,12 +2,11 @@
 using System.Threading.Tasks;
 using System.Net.NetworkInformation;
 
-//namespace MonitorPingUI
-//{
+
 
 public class PingClass
 {
-    public int n;                                         //переменная для подсчета количества icmp запросов
+    //public int n;                                         //переменная для подсчета количества icmp запросов
 
     public string outAnswer;                              //переменная вывода сообщения в окно "вывода"
 
@@ -22,7 +21,7 @@ public class PingClass
             PingReply reply;
             
             {
-                n++;
+                //n++;
    
                 {
 
@@ -40,8 +39,8 @@ public class PingClass
                         //IPOutputAnswer.BackColor = Color.Gray;
                         //string backColor = "Color.Gray";
                         //IPOutputAnswer.Text = "ICMP ответ получен - " + n + " Раз" + '\n';
-                        outAnswer = "ICMP answer received - " + n + " times" + '\n';
-                        //outAnswer = "ICMP ответ получен";
+                        //outAnswer = "ICMP answer received - " + n + " times" + '\n';
+                        outAnswer = "ICMP answer received";
 
                     }
 
@@ -74,4 +73,3 @@ public class PingClass
 
 }
 
-//}
