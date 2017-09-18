@@ -44,6 +44,11 @@
             this.buttonStart2 = new System.Windows.Forms.Button();
             this.buttonStop3 = new System.Windows.Forms.Button();
             this.DataTextFromIP2 = new System.Windows.Forms.Label();
+            this.DataTextFromIP3 = new System.Windows.Forms.Label();
+            this.buttonStop4 = new System.Windows.Forms.Button();
+            this.buttonStart3 = new System.Windows.Forms.Button();
+            this.IPOutputAnswer3 = new System.Windows.Forms.Label();
+            this.IPadressBox3 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // IPadressBox
@@ -89,7 +94,7 @@
             // DataTextFromIP
             // 
             this.DataTextFromIP.AutoSize = true;
-            this.DataTextFromIP.Location = new System.Drawing.Point(16, 48);
+            this.DataTextFromIP.Location = new System.Drawing.Point(16, 46);
             this.DataTextFromIP.Name = "DataTextFromIP";
             this.DataTextFromIP.Size = new System.Drawing.Size(0, 13);
             this.DataTextFromIP.TabIndex = 4;
@@ -107,7 +112,7 @@
             // 
             // IPadressBox1
             // 
-            this.IPadressBox1.Location = new System.Drawing.Point(12, 67);
+            this.IPadressBox1.Location = new System.Drawing.Point(12, 63);
             this.IPadressBox1.Name = "IPadressBox1";
             this.IPadressBox1.Size = new System.Drawing.Size(175, 20);
             this.IPadressBox1.TabIndex = 6;
@@ -118,7 +123,7 @@
             // 
             this.IPOutputAnswer1.AutoSize = true;
             this.IPOutputAnswer1.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.IPOutputAnswer1.Location = new System.Drawing.Point(199, 72);
+            this.IPOutputAnswer1.Location = new System.Drawing.Point(199, 68);
             this.IPOutputAnswer1.Name = "IPOutputAnswer1";
             this.IPOutputAnswer1.Size = new System.Drawing.Size(0, 13);
             this.IPOutputAnswer1.TabIndex = 7;
@@ -128,7 +133,7 @@
             // DataTextFromIP1
             // 
             this.DataTextFromIP1.AutoSize = true;
-            this.DataTextFromIP1.Location = new System.Drawing.Point(15, 92);
+            this.DataTextFromIP1.Location = new System.Drawing.Point(15, 86);
             this.DataTextFromIP1.Name = "DataTextFromIP1";
             this.DataTextFromIP1.Size = new System.Drawing.Size(0, 13);
             this.DataTextFromIP1.TabIndex = 8;
@@ -136,7 +141,7 @@
             // 
             // buttonStart1
             // 
-            this.buttonStart1.Location = new System.Drawing.Point(352, 68);
+            this.buttonStart1.Location = new System.Drawing.Point(352, 64);
             this.buttonStart1.Name = "buttonStart1";
             this.buttonStart1.Size = new System.Drawing.Size(94, 21);
             this.buttonStart1.TabIndex = 9;
@@ -146,7 +151,7 @@
             // 
             // buttonStop2
             // 
-            this.buttonStop2.Location = new System.Drawing.Point(452, 68);
+            this.buttonStop2.Location = new System.Drawing.Point(452, 64);
             this.buttonStop2.Name = "buttonStop2";
             this.buttonStop2.Size = new System.Drawing.Size(94, 21);
             this.buttonStop2.TabIndex = 10;
@@ -156,7 +161,7 @@
             // 
             // IPadressBox2
             // 
-            this.IPadressBox2.Location = new System.Drawing.Point(12, 111);
+            this.IPadressBox2.Location = new System.Drawing.Point(12, 105);
             this.IPadressBox2.Name = "IPadressBox2";
             this.IPadressBox2.Size = new System.Drawing.Size(175, 20);
             this.IPadressBox2.TabIndex = 11;
@@ -167,7 +172,7 @@
             // 
             this.IPOutputAnswer2.AutoSize = true;
             this.IPOutputAnswer2.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.IPOutputAnswer2.Location = new System.Drawing.Point(198, 116);
+            this.IPOutputAnswer2.Location = new System.Drawing.Point(199, 110);
             this.IPOutputAnswer2.Name = "IPOutputAnswer2";
             this.IPOutputAnswer2.Size = new System.Drawing.Size(0, 13);
             this.IPOutputAnswer2.TabIndex = 12;
@@ -176,7 +181,7 @@
             // 
             // buttonStart2
             // 
-            this.buttonStart2.Location = new System.Drawing.Point(352, 110);
+            this.buttonStart2.Location = new System.Drawing.Point(352, 104);
             this.buttonStart2.Name = "buttonStart2";
             this.buttonStart2.Size = new System.Drawing.Size(94, 21);
             this.buttonStart2.TabIndex = 13;
@@ -186,7 +191,7 @@
             // 
             // buttonStop3
             // 
-            this.buttonStop3.Location = new System.Drawing.Point(452, 110);
+            this.buttonStop3.Location = new System.Drawing.Point(452, 104);
             this.buttonStop3.Name = "buttonStop3";
             this.buttonStop3.Size = new System.Drawing.Size(94, 21);
             this.buttonStop3.TabIndex = 14;
@@ -197,17 +202,71 @@
             // DataTextFromIP2
             // 
             this.DataTextFromIP2.AutoSize = true;
-            this.DataTextFromIP2.Location = new System.Drawing.Point(15, 137);
+            this.DataTextFromIP2.Location = new System.Drawing.Point(15, 129);
             this.DataTextFromIP2.Name = "DataTextFromIP2";
             this.DataTextFromIP2.Size = new System.Drawing.Size(0, 13);
             this.DataTextFromIP2.TabIndex = 15;
             this.DataTextFromIP2.Click += new System.EventHandler(this.DataTextFromIP2_Click);
+            // 
+            // DataTextFromIP3
+            // 
+            this.DataTextFromIP3.AutoSize = true;
+            this.DataTextFromIP3.Location = new System.Drawing.Point(15, 170);
+            this.DataTextFromIP3.Name = "DataTextFromIP3";
+            this.DataTextFromIP3.Size = new System.Drawing.Size(0, 13);
+            this.DataTextFromIP3.TabIndex = 20;
+            this.DataTextFromIP3.Click += new System.EventHandler(this.DataTextFromIP3_Click);
+            // 
+            // buttonStop4
+            // 
+            this.buttonStop4.Location = new System.Drawing.Point(452, 145);
+            this.buttonStop4.Name = "buttonStop4";
+            this.buttonStop4.Size = new System.Drawing.Size(94, 21);
+            this.buttonStop4.TabIndex = 19;
+            this.buttonStop4.Text = "Stop";
+            this.buttonStop4.UseVisualStyleBackColor = true;
+            this.buttonStop4.Click += new System.EventHandler(this.buttonStop4_Click);
+            // 
+            // buttonStart3
+            // 
+            this.buttonStart3.Location = new System.Drawing.Point(352, 145);
+            this.buttonStart3.Name = "buttonStart3";
+            this.buttonStart3.Size = new System.Drawing.Size(94, 21);
+            this.buttonStart3.TabIndex = 18;
+            this.buttonStart3.Text = "Start";
+            this.buttonStart3.UseVisualStyleBackColor = true;
+            this.buttonStart3.Click += new System.EventHandler(this.buttonStart3_Click);
+            // 
+            // IPOutputAnswer3
+            // 
+            this.IPOutputAnswer3.AutoSize = true;
+            this.IPOutputAnswer3.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.IPOutputAnswer3.Location = new System.Drawing.Point(199, 151);
+            this.IPOutputAnswer3.Name = "IPOutputAnswer3";
+            this.IPOutputAnswer3.Size = new System.Drawing.Size(0, 13);
+            this.IPOutputAnswer3.TabIndex = 17;
+            this.IPOutputAnswer3.Tag = "";
+            this.IPOutputAnswer3.Click += new System.EventHandler(this.IPOutputAnswer3_Click);
+            // 
+            // IPadressBox3
+            // 
+            this.IPadressBox3.Location = new System.Drawing.Point(12, 146);
+            this.IPadressBox3.Name = "IPadressBox3";
+            this.IPadressBox3.Size = new System.Drawing.Size(175, 20);
+            this.IPadressBox3.TabIndex = 16;
+            this.IPadressBox3.Text = "127.0.0.1";
+            this.IPadressBox3.TextChanged += new System.EventHandler(this.IPadressBox3_TextChanged);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(554, 261);
+            this.Controls.Add(this.DataTextFromIP3);
+            this.Controls.Add(this.buttonStop4);
+            this.Controls.Add(this.buttonStart3);
+            this.Controls.Add(this.IPOutputAnswer3);
+            this.Controls.Add(this.IPadressBox3);
             this.Controls.Add(this.DataTextFromIP2);
             this.Controls.Add(this.buttonStop3);
             this.Controls.Add(this.buttonStart2);
@@ -250,5 +309,10 @@
         private System.Windows.Forms.Button buttonStart2;
         private System.Windows.Forms.Button buttonStop3;
         private System.Windows.Forms.Label DataTextFromIP2;
+        private System.Windows.Forms.Label DataTextFromIP3;
+        private System.Windows.Forms.Button buttonStop4;
+        private System.Windows.Forms.Button buttonStart3;
+        private System.Windows.Forms.Label IPOutputAnswer3;
+        private System.Windows.Forms.TextBox IPadressBox3;
     }
 }

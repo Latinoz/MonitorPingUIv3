@@ -12,13 +12,7 @@ namespace MonitorPingUI
 
         public bool x2 = false;
 
-        //private async void SetCancelTrue()               //Метод присваивания переменной, для блокировки 
-        //private void SetCancelTrue()
-        //{
-            //PingClass objectPing = new PingClass();
-         //   objectPing.cancelCycle = true;
-
-        //}
+        public bool x3 = false;
 
         public MainForm()
         {
@@ -188,6 +182,49 @@ namespace MonitorPingUI
 
         }
 
+        private void IPadressBox3_TextChanged(object sender, EventArgs e)
+        {
 
+        }
+
+        private void IPOutputAnswer3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private async void buttonStart3_Click(object sender, EventArgs e)
+        {
+            x3 = false;
+
+            if (String.IsNullOrEmpty(IPadressBox3.Text))
+            {
+                DataTextFromIP3.Text = "Введите ip адрес";
+            }
+
+            else
+            {
+                PingClass objectPing3 = new PingClass();
+                while (true)
+
+                    if (x3 == true)
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        IPOutputAnswer3.Text = await objectPing3.DoPingThreadAsync(IPadressBox3.Text);      // Пингуем хост и выводим значение           
+                    }
+            }
+        }
+
+        private void buttonStop4_Click(object sender, EventArgs e)
+        {
+            x3 = true;
+        }
+
+        private void DataTextFromIP3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

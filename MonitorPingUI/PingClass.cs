@@ -7,8 +7,6 @@ using System.Net.NetworkInformation;
 
 public class PingClass
 {
-    //public string address;                               //переменная для ввода ip адреса
-
     public int n;                                         //переменная для подсчета количества icmp запросов
 
     public string outAnswer;                              //переменная вывода сообщения в окно "вывода"
@@ -58,7 +56,7 @@ public class PingClass
                         //IPOutputAnswer.BackColor = Color.Red;
                         //IPOutputAnswer.Text = "Ping'a нет!";
                         //outAnswerNo = "Ping'a нет!";
-                        outAnswer = "no";
+                        outAnswer = "Хост не доступен!";
 
                     }
 
