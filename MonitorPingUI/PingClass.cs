@@ -9,13 +9,9 @@ public class PingClass
 {
     //public string address;                               //переменная для ввода ip адреса
 
-    //Ping pingSender = new Ping();
-
-    public int n;                                       //переменная для подсчета количества icmp запросов
+    public int n;                                         //переменная для подсчета количества icmp запросов
 
     public string outAnswer;                              //переменная вывода сообщения в окно "вывода"
-
-    public string notCorrectAddress;
 
     public bool cancelCycle = false;                            //переменная отключения цикла (кнопка Stop)
 
@@ -86,8 +82,7 @@ public class PingClass
 
         catch (PingException)
         {
-            //DataTextFromIP.Text = "Некорректный ip адрес!";
-            //notCorrectAddress = "error";
+            
             outAnswer = "Некорректный ip адрес!";
         }
 
