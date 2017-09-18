@@ -74,9 +74,7 @@ namespace MonitorPingUI
 
         private void DataTextFromIP_Click(object sender, EventArgs e)
         {
-            //PingClass objectPing = new PingClass();
-            //string value = Convert.ToString(objectPing.test);
-            //MessageBox.Show(value);
+            
         }
 
         private void buttonReset_Click(object sender, EventArgs e)

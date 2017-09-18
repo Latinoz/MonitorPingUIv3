@@ -25,20 +25,10 @@ public class PingClass
         {
 
             PingReply reply;
-
-            //while (true)
-            //while (n < 30)
-
+            
             {
                 n++;
-
-                //if (cancelCycle == true)
-
-                //{
-                //    break;
-                //}
-
-                //else
+   
                 {
 
                     var result = await Task.Run(() =>
@@ -76,7 +66,6 @@ public class PingClass
                 }
 
             }
-
 
         }
 
