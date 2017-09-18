@@ -6,13 +6,17 @@ namespace MonitorPingUI
 {
     public partial class MainForm : Form
     {
-       
-        private void SetCancelTrue()               //Метод присваивания переменной, для блокировки 
-        {
-            PingClass objectPing = new PingClass();
-            objectPing.cancelCycle = true;
+        public bool x = false;
 
-        }
+        public bool x1 = false;
+
+        //private async void SetCancelTrue()               //Метод присваивания переменной, для блокировки 
+        //private void SetCancelTrue()
+        //{
+            //PingClass objectPing = new PingClass();
+         //   objectPing.cancelCycle = true;
+
+        //}
 
         public MainForm()
         {
@@ -21,18 +25,19 @@ namespace MonitorPingUI
 
         private void IPadressBox_TextChanged(object sender, EventArgs e)
         {
-            
-            
+
+
         }
 
         private void IPOutputAnswer_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private async void buttonStart_Click(object sender, EventArgs e)
         {
-                        
+            x = false;
+
             if (String.IsNullOrEmpty(IPadressBox.Text))
             {
                 DataTextFromIP.Text = "Введите ip адрес";
@@ -40,20 +45,28 @@ namespace MonitorPingUI
 
             else
             {
+                
                 PingClass objectPing = new PingClass();
                 while (true)
+                 if (x == true)
+                 {
+                        break;
+                 }
+
+                else
                 {
                     IPOutputAnswer.Text = await objectPing.DoPingThreadAsync(IPadressBox.Text);      // Пингуем хост и выводим значение           
                 }
+
             }
 
         }
 
-        
+
         private void buttonStop_Click(object sender, EventArgs e)
         {
-
-            SetCancelTrue();                  //Остановить цикл отправки ICMP запросов
+            x = true;
+            //SetCancelTrue();                  //Остановить цикл отправки ICMP запросов
 
         }
 
@@ -79,7 +92,6 @@ namespace MonitorPingUI
         }
 
 
-
         private void MainForm_Load(object sender, EventArgs e)
         {
 
@@ -97,6 +109,8 @@ namespace MonitorPingUI
 
         private async void buttonStart1_Click(object sender, EventArgs e)
         {
+            x1 = false;
+
             if (String.IsNullOrEmpty(IPadressBox1.Text))
             {
                 DataTextFromIP1.Text = "Введите ip адрес";
@@ -106,17 +120,24 @@ namespace MonitorPingUI
             {
                 PingClass objectPing1 = new PingClass();
                 while (true)
-                {
-                    IPOutputAnswer1.Text = await objectPing1.DoPingThreadAsync(IPadressBox1.Text);      // Пингуем хост и выводим значение           
-                }
+                    
+                 if (x1 == true)
+                 {
+                            break;
+                  }
+                    else
+                     {
+                         IPOutputAnswer1.Text = await objectPing1.DoPingThreadAsync(IPadressBox1.Text);      // Пингуем хост и выводим значение           
+                     }
             }
         }
 
         private void buttonStop2_Click(object sender, EventArgs e)
         {
-            SetCancelTrue();                  //Остановить цикл отправки ICMP запросов
+            x1 = true;
+            //SetCancelTrue();                  //Остановить цикл отправки ICMP запросов
         }
-
+        
         private void DataTextFromIP1_Click(object sender, EventArgs e)
         {
 
