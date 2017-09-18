@@ -6,8 +6,8 @@ namespace MonitorPingUI
 {
     public partial class MainForm : Form
     {
-        public bool x = false;                            //Объявление переменной для остановки цикла выполнения мониторинга
-                                                          //одной из форм
+        public bool x = false;                            //Объявление переменной, служит для остановки цикла выполнения мониторинга
+                                                          //из форм
         public bool x1 = false;
 
         public bool x2 = false;
@@ -260,15 +260,40 @@ namespace MonitorPingUI
 
         private void buttonReset_Click(object sender, EventArgs e)
         {
-            //cancelCycle = false;               //Сброс переменной, для остановки цикла в начальное значение  
-            PingClass objectPing = new PingClass();
-            objectPing.cancelCycle = false;
-
+            
             IPadressBox.ResetText();           //Сбросить значения окна ввода ip адреса
 
             DataTextFromIP.ResetText();        //Сбросить значения окна вывода информации
 
             IPOutputAnswer.ResetText();        //Сбросить значения окна вывода окна дополнительной информации
+
+
+            IPadressBox1.ResetText();           
+
+            DataTextFromIP1.ResetText();        
+
+            IPOutputAnswer1.ResetText();        
+
+
+            IPadressBox2.ResetText();           
+
+            DataTextFromIP2.ResetText();       
+
+            IPOutputAnswer2.ResetText();       
+
+
+            IPadressBox3.ResetText();           
+
+            DataTextFromIP3.ResetText();        
+
+            IPOutputAnswer3.ResetText();        
+
+
+            IPadressBox4.ResetText();           
+
+            DataTextFromIP4.ResetText();        
+
+            IPOutputAnswer4.ResetText();        
 
         }
     }

@@ -11,9 +11,6 @@ public class PingClass
 
     public string outAnswer;                              //переменная вывода сообщения в окно "вывода"
 
-    public bool cancelCycle = false;                            //переменная отключения цикла (кнопка Stop)
-
-
     public async Task<string> DoPingThreadAsync(string address)     //Метод отправки icmp запросов в цикле
     {
         Ping pingSender = new Ping();
@@ -31,8 +28,7 @@ public class PingClass
 
                     var result = await Task.Run(() =>
                     {
-
-                        //Ping pingSender = new Ping();
+ 
                         reply = pingSender.Send(address);
                         Thread.Sleep(1000);
                         return reply.Status;
@@ -70,7 +66,7 @@ public class PingClass
         catch (PingException)
         {
             
-            outAnswer = "Некорректный ip адрес!";
+            outAnswer = "Invalid ip address!";
         }
 
         return outAnswer;
