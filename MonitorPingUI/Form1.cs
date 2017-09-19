@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 
@@ -15,6 +16,8 @@ namespace MonitorPingUI
         public bool x3 = false;
 
         public bool x4 = false;
+
+        public TextOutAnswer answer;
 
         public MainForm()
         {
@@ -53,7 +56,23 @@ namespace MonitorPingUI
 
                 else
                 {
-                    IPOutputAnswer.Text = await objectPing.DoPingThreadAsync(IPadressBox.Text);      // Пингуем хост и выводим значение           
+                        //IPOutputAnswer.Text = await objectPing.DoPingThreadAsync(IPadressBox.Text);      // Пингуем хост и выводим значение           
+                        answer = await objectPing.DoPingThreadAsync(IPadressBox.Text);
+                        if (answer == TextOutAnswer.Success)
+                        {
+                           IPOutputAnswer.BackColor = Color.LightGreen;
+                           IPOutputAnswer.Text = "ICMP answer received";
+                        }
+                        else if(answer == TextOutAnswer.Warning)
+                        {
+                           IPOutputAnswer.BackColor = Color.Red;
+                           IPOutputAnswer.Text = "Host is not available!";
+                        }
+                        else if(answer == TextOutAnswer.Error)
+                        {
+                           IPOutputAnswer.BackColor = Color.Gray;
+                           IPOutputAnswer.Text = "Invalid ip address!";
+                        }
                 }
 
             }
@@ -106,9 +125,25 @@ namespace MonitorPingUI
                             break;
                   }
                     else
-                     {
-                         IPOutputAnswer1.Text = await objectPing1.DoPingThreadAsync(IPadressBox1.Text);      // Пингуем хост и выводим значение           
-                     }
+                    {
+                        //IPOutputAnswer1.Text = await objectPing1.DoPingThreadAsync(IPadressBox1.Text);      // Пингуем хост и выводим значение 
+                        answer = await objectPing1.DoPingThreadAsync(IPadressBox1.Text);
+                        if (answer == TextOutAnswer.Success)
+                        {
+                            IPOutputAnswer1.BackColor = Color.LightGreen;
+                            IPOutputAnswer1.Text = "ICMP answer received";
+                        }
+                        else if (answer == TextOutAnswer.Warning)
+                        {
+                            IPOutputAnswer1.BackColor = Color.Red;
+                            IPOutputAnswer1.Text = "Host is not available!";
+                        }
+                        else if (answer == TextOutAnswer.Error)
+                        {
+                            IPOutputAnswer1.BackColor = Color.Gray;
+                            IPOutputAnswer1.Text = "Invalid ip address!";
+                        }
+                    }
             }
         }
 
@@ -152,7 +187,23 @@ namespace MonitorPingUI
                     }
                     else
                     {
-                        IPOutputAnswer2.Text = await objectPing2.DoPingThreadAsync(IPadressBox2.Text);      // Пингуем хост и выводим значение           
+                        // Пингуем хост и выводим значение   
+                        answer = await objectPing2.DoPingThreadAsync(IPadressBox2.Text);
+                        if (answer == TextOutAnswer.Success)
+                        {
+                            IPOutputAnswer2.BackColor = Color.LightGreen;
+                            IPOutputAnswer2.Text = "ICMP answer received";
+                        }
+                        else if (answer == TextOutAnswer.Warning)
+                        {
+                            IPOutputAnswer2.BackColor = Color.Red;
+                            IPOutputAnswer2.Text = "Host is not available!";
+                        }
+                        else if (answer == TextOutAnswer.Error)
+                        {
+                            IPOutputAnswer2.BackColor = Color.Gray;
+                            IPOutputAnswer2.Text = "Invalid ip address!";
+                        }
                     }
             }
         }
@@ -197,7 +248,23 @@ namespace MonitorPingUI
                     }
                     else
                     {
-                        IPOutputAnswer3.Text = await objectPing3.DoPingThreadAsync(IPadressBox3.Text);      // Пингуем хост и выводим значение           
+                        // Пингуем хост и выводим значение   
+                        answer = await objectPing3.DoPingThreadAsync(IPadressBox3.Text);
+                        if (answer == TextOutAnswer.Success)
+                        {
+                            IPOutputAnswer3.BackColor = Color.LightGreen;
+                            IPOutputAnswer3.Text = "ICMP answer received";
+                        }
+                        else if (answer == TextOutAnswer.Warning)
+                        {
+                            IPOutputAnswer3.BackColor = Color.Red;
+                            IPOutputAnswer3.Text = "Host is not available!";
+                        }
+                        else if (answer == TextOutAnswer.Error)
+                        {
+                            IPOutputAnswer3.BackColor = Color.Gray;
+                            IPOutputAnswer3.Text = "Invalid ip address!";
+                        }
                     }
             }
         }
@@ -242,7 +309,23 @@ namespace MonitorPingUI
                     }
                     else
                     {
-                        IPOutputAnswer4.Text = await objectPing4.DoPingThreadAsync(IPadressBox4.Text);      // Пингуем хост и выводим значение           
+                        // Пингуем хост и выводим значение        
+                        answer = await objectPing4.DoPingThreadAsync(IPadressBox4.Text);
+                        if (answer == TextOutAnswer.Success)
+                        {
+                            IPOutputAnswer4.BackColor = Color.LightGreen;
+                            IPOutputAnswer4.Text = "ICMP answer received";
+                        }
+                        else if (answer == TextOutAnswer.Warning)
+                        {
+                            IPOutputAnswer4.BackColor = Color.Red;
+                            IPOutputAnswer4.Text = "Host is not available!";
+                        }
+                        else if (answer == TextOutAnswer.Error)
+                        {
+                            IPOutputAnswer4.BackColor = Color.Gray;
+                            IPOutputAnswer4.Text = "Invalid ip address!";
+                        }
                     }
             }
         }
