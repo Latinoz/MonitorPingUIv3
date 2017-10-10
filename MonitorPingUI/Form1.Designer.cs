@@ -111,7 +111,7 @@
             this.buttonReset.Name = "buttonReset";
             this.buttonReset.Size = new System.Drawing.Size(94, 21);
             this.buttonReset.TabIndex = 5;
-            this.buttonReset.Text = "Reset";
+            this.buttonReset.Text = "Clear";
             this.buttonReset.UseVisualStyleBackColor = true;
             this.buttonReset.Click += new System.EventHandler(this.buttonReset_Click);
             // 

@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Threading;
+using System.Threading.Tasks;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -19,6 +21,8 @@ namespace MonitorPingUI
 
         public TextOutAnswer answer;
 
+        //protected int forstop = 0;
+
         public MainForm()
         {
             InitializeComponent();
@@ -37,6 +41,8 @@ namespace MonitorPingUI
 
         private async void buttonStart_Click(object sender, EventArgs e)
         {
+            buttonStart.Enabled = false;
+
             x = false;
 
             if (String.IsNullOrEmpty(IPadressBox.Text))
@@ -83,7 +89,22 @@ namespace MonitorPingUI
         private void buttonStop_Click(object sender, EventArgs e)
         {
             x = true;                    //Остановить цикл отправки ICMP запросов
-        
+
+            buttonStart.Enabled = true;
+
+            //Thread.Sleep(5000);
+
+            //if (IPOutputAnswer != null)
+            //{
+            //    IPOutputAnswer.BackColor = Color.Gray;
+            //    IPOutputAnswer.Text = "Stopped";
+            //}
+
+            //else
+            //{
+
+            //}
+            
         }
 
         private void DataTextFromIP_Click(object sender, EventArgs e)
@@ -108,6 +129,8 @@ namespace MonitorPingUI
 
         private async void buttonStart1_Click(object sender, EventArgs e)
         {
+            buttonStart1.Enabled = false;
+
             x1 = false;
 
             if (String.IsNullOrEmpty(IPadressBox1.Text))                   //Проверка на пустое поле
@@ -150,6 +173,10 @@ namespace MonitorPingUI
         private void buttonStop2_Click(object sender, EventArgs e)
         {
             x1 = true;
+
+            buttonStart1.Enabled = true;
+
+
         }
         
         private void DataTextFromIP1_Click(object sender, EventArgs e)
@@ -169,6 +196,8 @@ namespace MonitorPingUI
 
         private async void buttonStart2_Click(object sender, EventArgs e)
         {
+            buttonStart2.Enabled = false;
+
             x2 = false;
 
             if (String.IsNullOrEmpty(IPadressBox2.Text))
@@ -211,6 +240,8 @@ namespace MonitorPingUI
         private void buttonStop3_Click(object sender, EventArgs e)
         {
             x2 = true;
+
+            buttonStart2.Enabled = true;
         }
 
         private void DataTextFromIP2_Click(object sender, EventArgs e)
@@ -230,6 +261,8 @@ namespace MonitorPingUI
 
         private async void buttonStart3_Click(object sender, EventArgs e)
         {
+            buttonStart3.Enabled = false;
+
             x3 = false;
 
             if (String.IsNullOrEmpty(IPadressBox3.Text))
@@ -272,6 +305,8 @@ namespace MonitorPingUI
         private void buttonStop4_Click(object sender, EventArgs e)
         {
             x3 = true;
+
+            buttonStart3.Enabled = true;
         }
 
         private void DataTextFromIP3_Click(object sender, EventArgs e)
@@ -291,6 +326,8 @@ namespace MonitorPingUI
 
         private async void buttonStart4_Click(object sender, EventArgs e)
         {
+            buttonStart4.Enabled = false;
+
             x4 = false;
 
             if (String.IsNullOrEmpty(IPadressBox4.Text))
@@ -333,6 +370,8 @@ namespace MonitorPingUI
         private void buttonStop5_Click(object sender, EventArgs e)
         {
             x4 = true;
+
+            buttonStart4.Enabled = true;
         }
 
         private void DataTextFromIP4_Click(object sender, EventArgs e)
@@ -344,35 +383,35 @@ namespace MonitorPingUI
         private void buttonReset_Click(object sender, EventArgs e)
         {
             
-            IPadressBox.ResetText();           //Сбросить значения окна ввода ip адреса
+            //IPadressBox.ResetText();           //Сбросить значения окна ввода ip адреса
 
             DataTextFromIP.ResetText();        //Сбросить значения окна вывода информации
 
             IPOutputAnswer.ResetText();        //Сбросить значения окна вывода окна дополнительной информации
 
 
-            IPadressBox1.ResetText();           
+            //IPadressBox1.ResetText();           
 
             DataTextFromIP1.ResetText();        
 
             IPOutputAnswer1.ResetText();        
 
 
-            IPadressBox2.ResetText();           
+            //IPadressBox2.ResetText();           
 
             DataTextFromIP2.ResetText();       
 
             IPOutputAnswer2.ResetText();       
 
 
-            IPadressBox3.ResetText();           
+            //IPadressBox3.ResetText();           
 
             DataTextFromIP3.ResetText();        
 
             IPOutputAnswer3.ResetText();        
 
 
-            IPadressBox4.ResetText();           
+            //IPadressBox4.ResetText();           
 
             DataTextFromIP4.ResetText();        
 
