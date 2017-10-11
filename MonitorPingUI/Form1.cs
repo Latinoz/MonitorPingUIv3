@@ -21,8 +21,6 @@ namespace MonitorPingUI
 
         public TextOutAnswer answer;
 
-        //protected int forstop = 0;
-
         public MainForm()
         {
             InitializeComponent();
@@ -43,6 +41,8 @@ namespace MonitorPingUI
         {
             buttonStart.Enabled = false;
 
+            buttonStop.Enabled = true;
+
             x = false;
 
             if (String.IsNullOrEmpty(IPadressBox.Text))
@@ -62,8 +62,7 @@ namespace MonitorPingUI
 
                 else
                 {
-                        //IPOutputAnswer.Text = await objectPing.DoPingThreadAsync(IPadressBox.Text);      // Пингуем хост и выводим значение           
-                        answer = await objectPing.DoPingThreadAsync(IPadressBox.Text);
+                        answer = await objectPing.DoPingThreadAsync(IPadressBox.Text);          // Пингуем хост и выводим значение 
                         if (answer == TextOutAnswer.Success)
                         {
                            IPOutputAnswer.BackColor = Color.LightGreen;
@@ -92,18 +91,9 @@ namespace MonitorPingUI
 
             buttonStart.Enabled = true;
 
-            //Thread.Sleep(5000);
+            buttonStop.Enabled = false;
 
-            //if (IPOutputAnswer != null)
-            //{
-            //    IPOutputAnswer.BackColor = Color.Gray;
-            //    IPOutputAnswer.Text = "Stopped";
-            //}
-
-            //else
-            //{
-
-            //}
+            
             
         }
 
@@ -130,6 +120,8 @@ namespace MonitorPingUI
         private async void buttonStart1_Click(object sender, EventArgs e)
         {
             buttonStart1.Enabled = false;
+
+            buttonStop2.Enabled = true;
 
             x1 = false;
 
@@ -176,6 +168,8 @@ namespace MonitorPingUI
 
             buttonStart1.Enabled = true;
 
+            buttonStop2.Enabled = false;
+
 
         }
         
@@ -197,6 +191,8 @@ namespace MonitorPingUI
         private async void buttonStart2_Click(object sender, EventArgs e)
         {
             buttonStart2.Enabled = false;
+
+            buttonStop3.Enabled = true;
 
             x2 = false;
 
@@ -242,6 +238,8 @@ namespace MonitorPingUI
             x2 = true;
 
             buttonStart2.Enabled = true;
+
+            buttonStop3.Enabled = false;
         }
 
         private void DataTextFromIP2_Click(object sender, EventArgs e)
@@ -262,6 +260,8 @@ namespace MonitorPingUI
         private async void buttonStart3_Click(object sender, EventArgs e)
         {
             buttonStart3.Enabled = false;
+
+            buttonStop4.Enabled = true;
 
             x3 = false;
 
@@ -307,6 +307,8 @@ namespace MonitorPingUI
             x3 = true;
 
             buttonStart3.Enabled = true;
+
+            buttonStop4.Enabled = false;
         }
 
         private void DataTextFromIP3_Click(object sender, EventArgs e)
@@ -327,6 +329,8 @@ namespace MonitorPingUI
         private async void buttonStart4_Click(object sender, EventArgs e)
         {
             buttonStart4.Enabled = false;
+
+            buttonStop5.Enabled = true;
 
             x4 = false;
 
@@ -372,6 +376,8 @@ namespace MonitorPingUI
             x4 = true;
 
             buttonStart4.Enabled = true;
+
+            buttonStop5.Enabled = false;
         }
 
         private void DataTextFromIP4_Click(object sender, EventArgs e)

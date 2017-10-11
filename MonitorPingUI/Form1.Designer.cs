@@ -88,6 +88,7 @@
             // 
             // buttonStop
             // 
+            this.buttonStop.Enabled = false;
             this.buttonStop.Location = new System.Drawing.Point(454, 23);
             this.buttonStop.Name = "buttonStop";
             this.buttonStop.Size = new System.Drawing.Size(94, 21);
@@ -156,6 +157,7 @@
             // 
             // buttonStop2
             // 
+            this.buttonStop2.Enabled = false;
             this.buttonStop2.Location = new System.Drawing.Point(454, 64);
             this.buttonStop2.Name = "buttonStop2";
             this.buttonStop2.Size = new System.Drawing.Size(94, 21);
@@ -196,6 +198,7 @@
             // 
             // buttonStop3
             // 
+            this.buttonStop3.Enabled = false;
             this.buttonStop3.Location = new System.Drawing.Point(454, 104);
             this.buttonStop3.Name = "buttonStop3";
             this.buttonStop3.Size = new System.Drawing.Size(94, 21);
@@ -224,6 +227,7 @@
             // 
             // buttonStop4
             // 
+            this.buttonStop4.Enabled = false;
             this.buttonStop4.Location = new System.Drawing.Point(454, 145);
             this.buttonStop4.Name = "buttonStop4";
             this.buttonStop4.Size = new System.Drawing.Size(94, 21);
@@ -273,6 +277,7 @@
             // 
             // buttonStop5
             // 
+            this.buttonStop5.Enabled = false;
             this.buttonStop5.Location = new System.Drawing.Point(453, 187);
             this.buttonStop5.Name = "buttonStop5";
             this.buttonStop5.Size = new System.Drawing.Size(94, 21);
