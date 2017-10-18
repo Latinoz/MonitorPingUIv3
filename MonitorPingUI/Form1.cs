@@ -48,6 +48,14 @@ namespace MonitorPingUI
             if (String.IsNullOrEmpty(IPadressBox.Text))
             {
                 DataTextFromIP.Text = "Enter ip address";
+
+                x = true;
+
+                buttonStart.Enabled = true;
+
+                buttonStop.Enabled = false;
+
+
             }
 
             else
@@ -127,7 +135,13 @@ namespace MonitorPingUI
 
             if (String.IsNullOrEmpty(IPadressBox1.Text))                   //Проверка на пустое поле
             {
-                DataTextFromIP1.Text = "Enter ip address";                 
+                DataTextFromIP1.Text = "Enter ip address";
+
+                x1 = true;
+
+                buttonStart1.Enabled = true;
+
+                buttonStop2.Enabled = false;
             }
 
             else
@@ -199,6 +213,12 @@ namespace MonitorPingUI
             if (String.IsNullOrEmpty(IPadressBox2.Text))
             {
                 DataTextFromIP2.Text = "Enter ip address";
+
+                x2 = true;
+
+                buttonStart2.Enabled = true;
+
+                buttonStop3.Enabled = false;
             }
 
             else
@@ -268,6 +288,12 @@ namespace MonitorPingUI
             if (String.IsNullOrEmpty(IPadressBox3.Text))
             {
                 DataTextFromIP3.Text = "Enter ip address";
+
+                x3 = true;
+
+                buttonStart3.Enabled = true;
+
+                buttonStop4.Enabled = false;
             }
 
             else
@@ -337,6 +363,12 @@ namespace MonitorPingUI
             if (String.IsNullOrEmpty(IPadressBox4.Text))
             {
                 DataTextFromIP4.Text = "Enter ip address";
+
+                x4 = true;
+
+                buttonStart4.Enabled = true;
+
+                buttonStop5.Enabled = false;
             }
 
             else
