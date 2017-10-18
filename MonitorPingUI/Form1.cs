@@ -62,8 +62,6 @@ namespace MonitorPingUI
                 buttonStart.Enabled = true;
 
                 buttonStop.Enabled = false;
-
-
             }
 
             else
@@ -88,6 +86,12 @@ namespace MonitorPingUI
                         {
                            IPOutputAnswer.BackColor = Color.Red;
                            IPOutputAnswer.Text = "Host is not available!";
+                           // задаем текст подсказки
+                           notifyIcon1.BalloonTipText = "Host is not available!";
+                           // устанавливаем зголовк
+                           notifyIcon1.BalloonTipTitle = "Attention";
+                           // отображаем подсказку 3 секунд
+                           notifyIcon1.ShowBalloonTip(3);
                         }
                         else if(answer == TextOutAnswer.Error)
                         {
@@ -166,7 +170,6 @@ namespace MonitorPingUI
                   }
                     else
                     {
-                        //IPOutputAnswer1.Text = await objectPing1.DoPingThreadAsync(IPadressBox1.Text);      // Пингуем хост и выводим значение 
                         answer = await objectPing1.DoPingThreadAsync(IPadressBox1.Text);
                         if (answer == TextOutAnswer.Success)
                         {
@@ -177,6 +180,10 @@ namespace MonitorPingUI
                         {
                             IPOutputAnswer1.BackColor = Color.Red;
                             IPOutputAnswer1.Text = "Host is not available!";
+                            notifyIcon1.BalloonTipText = "Host is not available!";
+                            notifyIcon1.BalloonTipTitle = "Attention";
+                            notifyIcon1.ShowBalloonTip(3);
+
                         }
                         else if (answer == TextOutAnswer.Error)
                         {
@@ -257,6 +264,10 @@ namespace MonitorPingUI
                         {
                             IPOutputAnswer2.BackColor = Color.Red;
                             IPOutputAnswer2.Text = "Host is not available!";
+                            notifyIcon1.BalloonTipText = "Host is not available!";
+                            notifyIcon1.BalloonTipTitle = "Attention";
+                            notifyIcon1.ShowBalloonTip(3);
+
                         }
                         else if (answer == TextOutAnswer.Error)
                         {
@@ -335,6 +346,10 @@ namespace MonitorPingUI
                         {
                             IPOutputAnswer3.BackColor = Color.Red;
                             IPOutputAnswer3.Text = "Host is not available!";
+                            notifyIcon1.BalloonTipText = "Host is not available!";
+                            notifyIcon1.BalloonTipTitle = "Attention";
+                            notifyIcon1.ShowBalloonTip(3);
+
                         }
                         else if (answer == TextOutAnswer.Error)
                         {
@@ -413,6 +428,10 @@ namespace MonitorPingUI
                         {
                             IPOutputAnswer4.BackColor = Color.Red;
                             IPOutputAnswer4.Text = "Host is not available!";
+                            notifyIcon1.BalloonTipText = "Host is not available!";
+                            notifyIcon1.BalloonTipTitle = "Attention";
+                            notifyIcon1.ShowBalloonTip(3);
+
                         }
                         else if (answer == TextOutAnswer.Error)
                         {
