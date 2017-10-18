@@ -19,11 +19,19 @@ namespace MonitorPingUI
 
         public bool x4 = false;
 
-        public TextOutAnswer answer;
+        public TextOutAnswer answer;                      //переменная answer с типом TextOutAnswer
 
         public MainForm()
         {
             InitializeComponent();
+
+            this.ShowInTaskbar = false;
+            notifyIcon1.Click += notifyIcon1_MouseDoubleClick;
+        }
+
+        private void notifyIcon1_MouseDoubleClick(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Normal;
         }
 
         private void IPadressBox_TextChanged(object sender, EventArgs e)
@@ -471,5 +479,7 @@ namespace MonitorPingUI
             IPOutputAnswer4.ResetText();        
 
         }
+
+        
     }
 }

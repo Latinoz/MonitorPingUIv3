@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.IPadressBox = new System.Windows.Forms.TextBox();
             this.IPOutputAnswer = new System.Windows.Forms.Label();
             this.buttonStart = new System.Windows.Forms.Button();
@@ -54,6 +56,7 @@
             this.buttonStart4 = new System.Windows.Forms.Button();
             this.IPOutputAnswer4 = new System.Windows.Forms.Label();
             this.IPadressBox4 = new System.Windows.Forms.TextBox();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.SuspendLayout();
             // 
             // IPadressBox
@@ -316,6 +319,13 @@
             this.IPadressBox4.Text = "127.0.0.1";
             this.IPadressBox4.TextChanged += new System.EventHandler(this.IPadressBox4_TextChanged);
             // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
+            this.notifyIcon1.Text = "Popingui";
+            this.notifyIcon1.Visible = true;
+            this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -383,5 +393,6 @@
         private System.Windows.Forms.Button buttonStart4;
         private System.Windows.Forms.Label IPOutputAnswer4;
         private System.Windows.Forms.TextBox IPadressBox4;
+        private System.Windows.Forms.NotifyIcon notifyIcon1;
     }
 }
