@@ -83,6 +83,9 @@ namespace MonitorPingUI
                         }
                         else if(answer == TextOutAnswer.Error)
                         {
+                           x = true;
+                           buttonStart.Enabled = true;
+                           buttonStop.Enabled = false;
                            IPOutputAnswer.BackColor = Color.Gray;
                            IPOutputAnswer.Text = "Invalid ip address!";
                         }
@@ -169,6 +172,9 @@ namespace MonitorPingUI
                         }
                         else if (answer == TextOutAnswer.Error)
                         {
+                            x1 = true;
+                            buttonStart1.Enabled = true;
+                            buttonStop2.Enabled = false;
                             IPOutputAnswer1.BackColor = Color.Gray;
                             IPOutputAnswer1.Text = "Invalid ip address!";
                         }
@@ -246,6 +252,9 @@ namespace MonitorPingUI
                         }
                         else if (answer == TextOutAnswer.Error)
                         {
+                            x2 = true;
+                            buttonStart2.Enabled = true;
+                            buttonStop3.Enabled = false;
                             IPOutputAnswer2.BackColor = Color.Gray;
                             IPOutputAnswer2.Text = "Invalid ip address!";
                         }
@@ -321,6 +330,9 @@ namespace MonitorPingUI
                         }
                         else if (answer == TextOutAnswer.Error)
                         {
+                            x3 = true;
+                            buttonStart3.Enabled = true;
+                            buttonStop4.Enabled = false;
                             IPOutputAnswer3.BackColor = Color.Gray;
                             IPOutputAnswer3.Text = "Invalid ip address!";
                         }
@@ -396,6 +408,9 @@ namespace MonitorPingUI
                         }
                         else if (answer == TextOutAnswer.Error)
                         {
+                            x4 = true;
+                            buttonStart4.Enabled = true;
+                            buttonStop5.Enabled = false;
                             IPOutputAnswer4.BackColor = Color.Gray;
                             IPOutputAnswer4.Text = "Invalid ip address!";
                         }
