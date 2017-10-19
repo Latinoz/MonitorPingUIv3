@@ -357,6 +357,7 @@
             this.Controls.Add(this.buttonStart);
             this.Controls.Add(this.IPOutputAnswer);
             this.Controls.Add(this.IPadressBox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "MainForm";
             this.Text = "MonitorPingUI";
             this.Load += new System.EventHandler(this.MainForm_Load);
