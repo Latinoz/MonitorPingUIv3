@@ -1,12 +1,17 @@
 ﻿using System;
+using System.Collections;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Drawing;
 using System.Windows.Forms;
-
+using System.IO;
+using System.Runtime.Serialization.Json;
+using System.Runtime.Serialization;
+using System.Collections.Generic;
 
 namespace MonitorPingUI
 {
+
     public partial class MainForm : Form
     {
         public bool x = false;                            //Объявление переменной, служит для остановки цикла выполнения мониторинга
@@ -25,6 +30,8 @@ namespace MonitorPingUI
         {
             InitializeComponent();
 
+            LoadDataFromJson();                                 //Загрузка списка ip адресов из json
+
             this.ShowInTaskbar = false;
             notifyIcon1.Click += notifyIcon1_MouseDoubleClick;
         }
@@ -33,6 +40,8 @@ namespace MonitorPingUI
         {
             this.WindowState = FormWindowState.Normal;
         }
+
+        
 
         private void IPadressBox_TextChanged(object sender, EventArgs e)
         {
@@ -51,6 +60,8 @@ namespace MonitorPingUI
 
             buttonStop.Enabled = true;
 
+            SaveDatesToJson();
+            
             x = false;
 
             if (String.IsNullOrEmpty(IPadressBox.Text))
@@ -66,42 +77,42 @@ namespace MonitorPingUI
 
             else
             {
-                
+
                 PingClass objectPing = new PingClass();
                 while (true)
-                 if (x == true)
-                 {
+                    if (x == true)
+                    {
                         break;
-                 }
+                    }
 
-                else
-                {
+                    else
+                    {
                         answer = await objectPing.DoPingThreadAsync(IPadressBox.Text);          // Пингуем хост и выводим значение 
                         if (answer == TextOutAnswer.Success)
                         {
-                           IPOutputAnswer.BackColor = Color.LightGreen;
-                           IPOutputAnswer.Text = "ICMP answer received";
+                            IPOutputAnswer.BackColor = Color.LightGreen;
+                            IPOutputAnswer.Text = "ICMP answer received";
                         }
-                        else if(answer == TextOutAnswer.Warning)
+                        else if (answer == TextOutAnswer.Warning)
                         {
-                           IPOutputAnswer.BackColor = Color.Red;
-                           IPOutputAnswer.Text = "Host is not available!";
-                           // задаем текст подсказки
-                           notifyIcon1.BalloonTipText = "Host is not available!";
-                           // устанавливаем зголовк
-                           notifyIcon1.BalloonTipTitle = "Attention";
-                           // отображаем подсказку 3 секунд
-                           notifyIcon1.ShowBalloonTip(3);
+                            IPOutputAnswer.BackColor = Color.Red;
+                            IPOutputAnswer.Text = "Host is not available!";
+                            // задаем текст подсказки
+                            notifyIcon1.BalloonTipText = "Host is not available!";
+                            // устанавливаем зголовк
+                            notifyIcon1.BalloonTipTitle = "Attention";
+                            // отображаем подсказку 3 секунд
+                            notifyIcon1.ShowBalloonTip(3);
                         }
-                        else if(answer == TextOutAnswer.Error)
+                        else if (answer == TextOutAnswer.Error)
                         {
-                           x = true;
-                           buttonStart.Enabled = true;
-                           buttonStop.Enabled = false;
-                           IPOutputAnswer.BackColor = Color.Gray;
-                           IPOutputAnswer.Text = "Invalid ip address!";
+                            x = true;
+                            buttonStart.Enabled = true;
+                            buttonStop.Enabled = false;
+                            IPOutputAnswer.BackColor = Color.Gray;
+                            IPOutputAnswer.Text = "Invalid ip address!";
                         }
-                }
+                    }
 
             }
 
@@ -116,15 +127,14 @@ namespace MonitorPingUI
 
             buttonStop.Enabled = false;
 
-            
-            
+
         }
 
         private void DataTextFromIP_Click(object sender, EventArgs e)
         {
-            
+
         }
- 
+
         private void MainForm_Load(object sender, EventArgs e)
         {
 
@@ -146,6 +156,8 @@ namespace MonitorPingUI
 
             buttonStop2.Enabled = true;
 
+            SaveDatesToJson();
+
             x1 = false;
 
             if (String.IsNullOrEmpty(IPadressBox1.Text))                   //Проверка на пустое поле
@@ -163,11 +175,11 @@ namespace MonitorPingUI
             {
                 PingClass objectPing1 = new PingClass();
                 while (true)
-                    
-                 if (x1 == true)
-                 {
-                            break;
-                  }
+
+                    if (x1 == true)
+                    {
+                        break;
+                    }
                     else
                     {
                         answer = await objectPing1.DoPingThreadAsync(IPadressBox1.Text);
@@ -207,7 +219,7 @@ namespace MonitorPingUI
 
 
         }
-        
+
         private void DataTextFromIP1_Click(object sender, EventArgs e)
         {
 
@@ -228,6 +240,8 @@ namespace MonitorPingUI
             buttonStart2.Enabled = false;
 
             buttonStop3.Enabled = true;
+
+            SaveDatesToJson();
 
             x2 = false;
 
@@ -311,6 +325,8 @@ namespace MonitorPingUI
 
             buttonStop4.Enabled = true;
 
+            SaveDatesToJson();
+
             x3 = false;
 
             if (String.IsNullOrEmpty(IPadressBox3.Text))
@@ -393,6 +409,8 @@ namespace MonitorPingUI
 
             buttonStop5.Enabled = true;
 
+            SaveDatesToJson();
+
             x4 = false;
 
             if (String.IsNullOrEmpty(IPadressBox4.Text))
@@ -462,7 +480,7 @@ namespace MonitorPingUI
 
         private void buttonReset_Click(object sender, EventArgs e)
         {
-            
+
             //IPadressBox.ResetText();           //Сбросить значения окна ввода ip адреса
 
             DataTextFromIP.ResetText();        //Сбросить значения окна вывода информации
@@ -472,33 +490,70 @@ namespace MonitorPingUI
 
             //IPadressBox1.ResetText();           
 
-            DataTextFromIP1.ResetText();        
+            DataTextFromIP1.ResetText();
 
-            IPOutputAnswer1.ResetText();        
+            IPOutputAnswer1.ResetText();
 
 
             //IPadressBox2.ResetText();           
 
-            DataTextFromIP2.ResetText();       
+            DataTextFromIP2.ResetText();
 
-            IPOutputAnswer2.ResetText();       
+            IPOutputAnswer2.ResetText();
 
 
             //IPadressBox3.ResetText();           
 
-            DataTextFromIP3.ResetText();        
+            DataTextFromIP3.ResetText();
 
-            IPOutputAnswer3.ResetText();        
+            IPOutputAnswer3.ResetText();
 
 
             //IPadressBox4.ResetText();           
 
-            DataTextFromIP4.ResetText();        
+            DataTextFromIP4.ResetText();
 
-            IPOutputAnswer4.ResetText();        
+            IPOutputAnswer4.ResetText();
 
         }
 
-        
+        public void SaveDatesToJson()                          //Метод сохранения всех значений ячеек, для ввода ip адреса
+        {
+            
+            List<Json> iphosts = new List<Json>
+            {
+                new Json(IPadressBox.Text),
+                new Json(IPadressBox1.Text),
+                new Json(IPadressBox2.Text),
+                new Json(IPadressBox3.Text),
+                new Json(IPadressBox4.Text)
+            };
+
+            DataContractJsonSerializer jsonFormatter = new DataContractJsonSerializer(typeof(List<Json>));
+
+            using (FileStream fs = new FileStream("hosts.json", FileMode.OpenOrCreate))
+            {
+                jsonFormatter.WriteObject(fs, iphosts);
+            }
+        }
+
+        public void LoadDataFromJson()
+        {
+            using (FileStream fs = new FileStream("hosts.json", FileMode.OpenOrCreate))
+            {
+                
+               DataContractJsonSerializer jsonFormatter = new DataContractJsonSerializer(typeof(List<Json>));
+
+                List<Json> iphostsload = (List<Json>)jsonFormatter.ReadObject(fs);
+               
+                IPadressBox.Text = iphostsload[0].Hosts;
+                IPadressBox1.Text = iphostsload[1].Hosts;
+                IPadressBox2.Text = iphostsload[2].Hosts;
+                IPadressBox3.Text = iphostsload[3].Hosts;
+                IPadressBox4.Text = iphostsload[4].Hosts;
+ 
+            }
+
+        }
     }
 }
