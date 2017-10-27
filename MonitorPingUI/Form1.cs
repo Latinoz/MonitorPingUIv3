@@ -30,6 +30,8 @@ namespace MonitorPingUI
         {
             InitializeComponent();
 
+            //SaveDatesToJson();
+
             LoadDataFromJson();                                 //Загрузка списка ip адресов из json
 
             this.ShowInTaskbar = false;
@@ -41,7 +43,7 @@ namespace MonitorPingUI
             this.WindowState = FormWindowState.Normal;
         }
 
-        
+
 
         private void IPadressBox_TextChanged(object sender, EventArgs e)
         {
@@ -61,7 +63,7 @@ namespace MonitorPingUI
             buttonStop.Enabled = true;
 
             SaveDatesToJson();
-            
+
             x = false;
 
             if (String.IsNullOrEmpty(IPadressBox.Text))
@@ -517,9 +519,10 @@ namespace MonitorPingUI
 
         }
 
+        private object thisLock = new Object();
         public void SaveDatesToJson()                          //Метод сохранения всех значений ячеек, для ввода ip адреса
         {
-            
+
             List<Json> iphosts = new List<Json>
             {
                 new Json(IPadressBox.Text),
@@ -539,20 +542,25 @@ namespace MonitorPingUI
 
         public void LoadDataFromJson()
         {
-            using (FileStream fs = new FileStream("hosts.json", FileMode.OpenOrCreate))
-            {
-                
-               DataContractJsonSerializer jsonFormatter = new DataContractJsonSerializer(typeof(List<Json>));
+            string path = @"hosts.json";
+            //FileInfo fileInf = new FileInfo(path);
 
-                List<Json> iphostsload = (List<Json>)jsonFormatter.ReadObject(fs);
-               
-                IPadressBox.Text = iphostsload[0].Hosts;
-                IPadressBox1.Text = iphostsload[1].Hosts;
-                IPadressBox2.Text = iphostsload[2].Hosts;
-                IPadressBox3.Text = iphostsload[3].Hosts;
-                IPadressBox4.Text = iphostsload[4].Hosts;
- 
-            }
+            if (File.Exists(path))
+                using (FileStream fs = new FileStream(path, FileMode.Open))
+                {
+
+                    DataContractJsonSerializer jsonFormatter = new DataContractJsonSerializer(typeof(List<Json>));
+
+                    List<Json> iphostsload = (List<Json>)jsonFormatter.ReadObject(fs);
+
+                    IPadressBox.Text = iphostsload[0].Hosts;
+                    IPadressBox1.Text = iphostsload[1].Hosts;
+                    IPadressBox2.Text = iphostsload[2].Hosts;
+                    IPadressBox3.Text = iphostsload[3].Hosts;
+                    IPadressBox4.Text = iphostsload[4].Hosts;
+
+                }
+
 
         }
     }
