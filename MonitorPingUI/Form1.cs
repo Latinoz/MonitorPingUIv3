@@ -24,31 +24,49 @@ namespace MonitorPingUI
 
         public bool x4 = false;
 
+        public bool UpdateInForm = false;                 //Для Запроса сохранения в файл
+
         public TextOutAnswer answer;                      //переменная answer с типом TextOutAnswer
 
         public MainForm()
         {
             InitializeComponent();
 
-            //SaveDatesToJson();
-
-            LoadDataFromJson();                                 //Загрузка списка ip адресов из json
-
             this.ShowInTaskbar = false;
             notifyIcon1.Click += notifyIcon1_MouseDoubleClick;
         }
 
-        private void notifyIcon1_MouseDoubleClick(object sender, EventArgs e)
+        private void notifyIcon1_MouseDoubleClick(object sender, EventArgs e)             //Для отображение в трее 
         {
             this.WindowState = FormWindowState.Normal;
         }
 
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            LoadDataFromJson();                                 //Загрузка списка ip адресов из json
+        }
 
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (UpdateInForm)
+            {
+                DialogResult result = MessageBox.Show("Save Changes?", "Attention", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    // Сохраняем
+                    SaveDatesToJson();
+                }
+                else if (result == DialogResult.No)
+                {
+                    //Не сохраняем
+                }
+                else e.Cancel = true;//Отменяем действие
+            }
+        }
 
         private void IPadressBox_TextChanged(object sender, EventArgs e)
         {
-
-
+            //UpdateInForm = true;
         }
 
         private void IPOutputAnswer_Click(object sender, EventArgs e)
@@ -62,7 +80,7 @@ namespace MonitorPingUI
 
             buttonStop.Enabled = true;
 
-            SaveDatesToJson();
+            UpdateInForm = true;
 
             x = false;
 
@@ -129,6 +147,7 @@ namespace MonitorPingUI
 
             buttonStop.Enabled = false;
 
+            //UpdateInForm = true;
 
         }
 
@@ -137,10 +156,7 @@ namespace MonitorPingUI
 
         }
 
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void IPadressBox1_TextChanged(object sender, EventArgs e)
         {
@@ -158,7 +174,7 @@ namespace MonitorPingUI
 
             buttonStop2.Enabled = true;
 
-            SaveDatesToJson();
+            UpdateInForm = true;
 
             x1 = false;
 
@@ -243,7 +259,7 @@ namespace MonitorPingUI
 
             buttonStop3.Enabled = true;
 
-            SaveDatesToJson();
+            UpdateInForm = true;
 
             x2 = false;
 
@@ -327,7 +343,7 @@ namespace MonitorPingUI
 
             buttonStop4.Enabled = true;
 
-            SaveDatesToJson();
+            UpdateInForm = true;
 
             x3 = false;
 
@@ -411,7 +427,7 @@ namespace MonitorPingUI
 
             buttonStop5.Enabled = true;
 
-            SaveDatesToJson();
+            UpdateInForm = true;
 
             x4 = false;
 
@@ -519,7 +535,7 @@ namespace MonitorPingUI
 
         }
 
-        private object thisLock = new Object();
+        
         public void SaveDatesToJson()                          //Метод сохранения всех значений ячеек, для ввода ip адреса
         {
 
@@ -534,7 +550,7 @@ namespace MonitorPingUI
 
             DataContractJsonSerializer jsonFormatter = new DataContractJsonSerializer(typeof(List<Json>));
 
-            using (FileStream fs = new FileStream("hosts.json", FileMode.OpenOrCreate))
+            using (FileStream fs = new FileStream("hosts.json", FileMode.Create))
             {
                 jsonFormatter.WriteObject(fs, iphosts);
             }
