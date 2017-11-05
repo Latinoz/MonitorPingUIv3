@@ -133,8 +133,8 @@ namespace MonitorPingUI
                             IPOutputAnswer.BackColor = Color.Red;
                             IPOutputAnswer.Text = "Host is not available!";
                             // задаем текст подсказки
-                            notifyIcon1.BalloonTipText = "Host is not available!";
-                            // устанавливаем зголовк
+                            notifyIcon1.BalloonTipText = IPadressBox.Text +" is not available!";
+                            // устанавливаем заголовок
                             notifyIcon1.BalloonTipTitle = "Attention";
                             // отображаем подсказку 3 секунд
                             notifyIcon1.ShowBalloonTip(3);
@@ -225,7 +225,7 @@ namespace MonitorPingUI
                         {
                             IPOutputAnswer1.BackColor = Color.Red;
                             IPOutputAnswer1.Text = "Host is not available!";
-                            notifyIcon1.BalloonTipText = "Host is not available!";
+                            notifyIcon1.BalloonTipText = IPadressBox1.Text + " is not available!";
                             notifyIcon1.BalloonTipTitle = "Attention";
                             notifyIcon1.ShowBalloonTip(3);
 
@@ -311,7 +311,7 @@ namespace MonitorPingUI
                         {
                             IPOutputAnswer2.BackColor = Color.Red;
                             IPOutputAnswer2.Text = "Host is not available!";
-                            notifyIcon1.BalloonTipText = "Host is not available!";
+                            notifyIcon1.BalloonTipText = IPadressBox2.Text + " is not available!";
                             notifyIcon1.BalloonTipTitle = "Attention";
                             notifyIcon1.ShowBalloonTip(3);
 
@@ -395,7 +395,7 @@ namespace MonitorPingUI
                         {
                             IPOutputAnswer3.BackColor = Color.Red;
                             IPOutputAnswer3.Text = "Host is not available!";
-                            notifyIcon1.BalloonTipText = "Host is not available!";
+                            notifyIcon1.BalloonTipText = IPadressBox3.Text + " is not available!";
                             notifyIcon1.BalloonTipTitle = "Attention";
                             notifyIcon1.ShowBalloonTip(3);
 
@@ -479,7 +479,7 @@ namespace MonitorPingUI
                         {
                             IPOutputAnswer4.BackColor = Color.Red;
                             IPOutputAnswer4.Text = "Host is not available!";
-                            notifyIcon1.BalloonTipText = "Host is not available!";
+                            notifyIcon1.BalloonTipText = IPadressBox4.Text + " is not available!";
                             notifyIcon1.BalloonTipTitle = "Attention";
                             notifyIcon1.ShowBalloonTip(3);
 
