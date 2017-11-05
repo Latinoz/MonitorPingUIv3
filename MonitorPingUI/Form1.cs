@@ -36,14 +36,29 @@ namespace MonitorPingUI
             notifyIcon1.Click += notifyIcon1_MouseDoubleClick;
         }
 
-        private void notifyIcon1_MouseDoubleClick(object sender, EventArgs e)             //Для отображение в трее 
+        private void notifyIcon1_MouseDoubleClick(object sender, EventArgs e)         //При двойном клике мыше отображение окна 
         {
+            this.Show();
             this.WindowState = FormWindowState.Normal;
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            LoadDataFromJson();                                 //Загрузка списка ip адресов из json
+            LoadDataFromJson();                                                        //Загрузка списка ip адресов из json
+        }
+
+        private void MainForm_Resize(object sender, EventArgs e)                       //При минимизации окна, переносит "окно" в трей
+        {
+            if (FormWindowState.Minimized == this.WindowState)
+            {
+                notifyIcon1.Visible = true;
+                this.Hide();
+            }
+
+            else if (FormWindowState.Normal == this.WindowState)
+            {
+                notifyIcon1.Visible = false;
+            }
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -66,7 +81,7 @@ namespace MonitorPingUI
 
         private void IPadressBox_TextChanged(object sender, EventArgs e)
         {
-            //UpdateInForm = true;
+            
         }
 
         private void IPOutputAnswer_Click(object sender, EventArgs e)
