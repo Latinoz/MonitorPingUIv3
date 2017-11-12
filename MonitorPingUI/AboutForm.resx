@@ -117,35 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="notifyIcon1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="notifyIcon1.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAMMOAADDDgAAAAAAAAAA
-        AAD/////////////////////////////////////////////////////////////////////////////
-        ////////////////////////////////////////////////////////////////////////////////
-        ////////////////////////////////////////////////////////////////////////////////
-        /////////////////////////v7+//39/f///////v7+//3+/v/+/f7///////z8/f///////f39//v7
-        +//9/f3///////////////////////////////////////////////////////7//////v////////7+
-        /v/////////////////////////////////t7u//ycnJ///////m5+j/0dHR/87Pz//+/v7/tre3//Tz
-        8f/KzM3/YWFh/8LBv////////f39////////////2dvd/5WUlf//////y83O/5+fn/+foZ//6erq/z4/
-        QP/MzMv/bGxt/7+/v/+AgH7///////7+/v///////////+Pl5/9eXV//3NvZ/9TW2P+gn5//ra6t/7Kz
-        s/9iYmD/pqen/6mnpv/z9PX/gYKA///////+/v/////////////g4uT/aGdp/3t5ef+ztLT/pqam/6an
-        qP+EhIT/l5eX/5WWlf+/v77/mpue/5COjf///////f39////////////19nb/6uoqf++v7//i4yL/7e2
-        tv+DhYf/goGA/7q8vP+foKD/nZ2c///////8/Pz//////////////////////+Hj5P9fYGH/c3Fx/62v
-        rv+0tLT/XmBi/7Owr/+0t7f/0NHP/3x8f/+Hhob/n5+d///////+/v7////////////9/v7/sbKy/8/O
-        zf/3+Pj/6Ojo/9na2v/29fX/6Orq//f39v/q6+z/l5eX/93c2////////v7+////////////////////
-        /////v///v7+/////////////v7+/////////////v7+////////////////////////////////////
-        ///8/Pz//f39///////+/v7//f39///////+/v7///////7+/v/7+/v//v7+////////////////////
-        ////////////////////////////////////////////////////////////////////////////////
-        ////////////////////////////////////////////////////////////////////////////////
-        ////////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAA==
-</value>
-  </data>
-  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>130, 17</value>
-  </metadata>
 </root>
