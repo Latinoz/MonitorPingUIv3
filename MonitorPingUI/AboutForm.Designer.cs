@@ -34,11 +34,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 43);
+            this.label1.Location = new System.Drawing.Point(12, 36);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(185, 52);
+            this.label1.Size = new System.Drawing.Size(185, 65);
             this.label1.TabIndex = 0;
-            this.label1.Text = "MonPing ver. 1.0 \r\n\r\n\r\nDevelopment:  Martin Vargas-Campos";
+            this.label1.Text = "MonPing ver. 1.1 \r\n\r\nDevelopment:  Martin Vargas-Campos\r\n\r\nContact: varcammartin@" +
+    "gmail.com";
             // 
             // AboutForm
             // 

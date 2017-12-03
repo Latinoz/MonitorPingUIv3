@@ -20,15 +20,25 @@ namespace MonitorPingUI
 
         public bool x4 = false;
 
-        public bool check = false;
+        public bool checkLog = false;                   //Переменная для Вкл/Выкл логирования
 
-        public bool check1 = false;
+        public bool checkLog1 = false;
 
-        public bool check2 = false;
+        public bool checkLog2 = false;
 
-        public bool check3 = false;
+        public bool checkLog3 = false;
 
-        public bool check4 = false;
+        public bool checkLog4 = false;
+
+        public bool checkAlarm = true;                   //Переменная для Отк/Вкл оповещения в трее
+
+        public bool checkAlarm1 = true;
+
+        public bool checkAlarm2 = true;
+
+        public bool checkAlarm3 = true;
+
+        public bool checkAlarm4 = true;
 
         public bool UpdateInForm = false;                 //Для Запроса сохранения в файл
 
@@ -67,7 +77,7 @@ namespace MonitorPingUI
             }
         }
 
-        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)      //При закрытии программы, сохранять или нет
         {
             if (UpdateInForm)
             {
@@ -133,7 +143,7 @@ namespace MonitorPingUI
                         {
                             IPOutputAnswer.BackColor = Color.LightGreen;
                             IPOutputAnswer.Text = "ICMP answer received";
-                            if (check == true)
+                            if (checkLog == true)
                             {
                                 Logging.DoLog(IPadressBox.Text,IPOutputAnswer.Text);
                             }
@@ -142,16 +152,20 @@ namespace MonitorPingUI
                         {
                             IPOutputAnswer.BackColor = Color.Red;
                             IPOutputAnswer.Text = "Host is not available!";
-                            if (check == true)
+                            if (checkLog == true)
                             {
                                 Logging.DoLog(IPadressBox.Text, IPOutputAnswer.Text);
                             }
-                            // задаем текст подсказки
-                            notifyIcon1.BalloonTipText = IPadressBox.Text +" is not available!";
-                            // устанавливаем заголовок
-                            notifyIcon1.BalloonTipTitle = "Attention";
-                            // отображаем подсказку 3 секунд
-                            notifyIcon1.ShowBalloonTip(3);
+
+                            if (checkAlarm == true)
+                            {
+                                // задаем текст подсказки
+                                notifyIcon1.BalloonTipText = IPadressBox.Text + " is not available!";
+                                // устанавливаем заголовок
+                                notifyIcon1.BalloonTipTitle = "Attention";
+                                // отображаем подсказку 3 секунд
+                                notifyIcon1.ShowBalloonTip(3);
+                            }
                         }
                         else if (answer == TextOutAnswer.Error)
                         {
@@ -235,7 +249,7 @@ namespace MonitorPingUI
                         {
                             IPOutputAnswer1.BackColor = Color.LightGreen;
                             IPOutputAnswer1.Text = "ICMP answer received";
-                            if (check1 == true)
+                            if (checkLog1 == true)
                             {
                                 Logging.DoLog(IPadressBox1.Text, IPOutputAnswer1.Text);
                             }
@@ -244,14 +258,16 @@ namespace MonitorPingUI
                         {
                             IPOutputAnswer1.BackColor = Color.Red;
                             IPOutputAnswer1.Text = "Host is not available!";
-                            if (check1 == true)
+                            if (checkLog1 == true)
                             {
                                 Logging.DoLog(IPadressBox1.Text, IPOutputAnswer1.Text);
                             }
-                            notifyIcon1.BalloonTipText = IPadressBox1.Text + " is not available!";
-                            notifyIcon1.BalloonTipTitle = "Attention";
-                            notifyIcon1.ShowBalloonTip(3);
-
+                            if (checkAlarm1 == true)
+                            {
+                                notifyIcon1.BalloonTipText = IPadressBox1.Text + " is not available!";
+                                notifyIcon1.BalloonTipTitle = "Attention";
+                                notifyIcon1.ShowBalloonTip(3);
+                            }
                         }
                         else if (answer == TextOutAnswer.Error)
                         {
@@ -329,7 +345,7 @@ namespace MonitorPingUI
                         {
                             IPOutputAnswer2.BackColor = Color.LightGreen;
                             IPOutputAnswer2.Text = "ICMP answer received";
-                            if (check2 == true)
+                            if (checkLog2 == true)
                             {
                                 Logging.DoLog(IPadressBox2.Text, IPOutputAnswer2.Text);
                             }
@@ -338,14 +354,16 @@ namespace MonitorPingUI
                         {
                             IPOutputAnswer2.BackColor = Color.Red;
                             IPOutputAnswer2.Text = "Host is not available!";
-                            if (check2 == true)
+                            if (checkLog2 == true)
                             {
                                 Logging.DoLog(IPadressBox2.Text, IPOutputAnswer2.Text);
                             }
-                            notifyIcon1.BalloonTipText = IPadressBox2.Text + " is not available!";
-                            notifyIcon1.BalloonTipTitle = "Attention";
-                            notifyIcon1.ShowBalloonTip(3);
-
+                            if (checkAlarm2 == true)
+                            {
+                                notifyIcon1.BalloonTipText = IPadressBox2.Text + " is not available!";
+                                notifyIcon1.BalloonTipTitle = "Attention";
+                                notifyIcon1.ShowBalloonTip(3);
+                            }
                         }
                         else if (answer == TextOutAnswer.Error)
                         {
@@ -421,7 +439,7 @@ namespace MonitorPingUI
                         {
                             IPOutputAnswer3.BackColor = Color.LightGreen;
                             IPOutputAnswer3.Text = "ICMP answer received";
-                            if (check3 == true)
+                            if (checkLog3 == true)
                             {
                                 Logging.DoLog(IPadressBox3.Text, IPOutputAnswer3.Text);
                             }
@@ -430,14 +448,16 @@ namespace MonitorPingUI
                         {
                             IPOutputAnswer3.BackColor = Color.Red;
                             IPOutputAnswer3.Text = "Host is not available!";
-                            if (check3 == true)
+                            if (checkLog3 == true)
                             {
                                 Logging.DoLog(IPadressBox3.Text, IPOutputAnswer3.Text);
                             }
-                            notifyIcon1.BalloonTipText = IPadressBox3.Text + " is not available!";
-                            notifyIcon1.BalloonTipTitle = "Attention";
-                            notifyIcon1.ShowBalloonTip(3);
-
+                            if (checkAlarm3 == true)
+                            {
+                                notifyIcon1.BalloonTipText = IPadressBox3.Text + " is not available!";
+                                notifyIcon1.BalloonTipTitle = "Attention";
+                                notifyIcon1.ShowBalloonTip(3);
+                            }
                         }
                         else if (answer == TextOutAnswer.Error)
                         {
@@ -513,7 +533,7 @@ namespace MonitorPingUI
                         {
                             IPOutputAnswer4.BackColor = Color.LightGreen;
                             IPOutputAnswer4.Text = "ICMP answer received";
-                            if (check4 == true)
+                            if (checkLog4 == true)
                             {
                                 Logging.DoLog(IPadressBox4.Text, IPOutputAnswer4.Text);
                             }
@@ -522,14 +542,16 @@ namespace MonitorPingUI
                         {
                             IPOutputAnswer4.BackColor = Color.Red;
                             IPOutputAnswer4.Text = "Host is not available!";
-                            if (check4 == true)
+                            if (checkLog4 == true)
                             {
                                 Logging.DoLog(IPadressBox4.Text, IPOutputAnswer4.Text);
                             }
-                            notifyIcon1.BalloonTipText = IPadressBox4.Text + " is not available!";
-                            notifyIcon1.BalloonTipTitle = "Attention";
-                            notifyIcon1.ShowBalloonTip(3);
-
+                            if (checkAlarm4 == true)
+                            {
+                                notifyIcon1.BalloonTipText = IPadressBox4.Text + " is not available!";
+                                notifyIcon1.BalloonTipTitle = "Attention";
+                                notifyIcon1.ShowBalloonTip(3);
+                            }
                         }
                         else if (answer == TextOutAnswer.Error)
                         {
@@ -621,7 +643,6 @@ namespace MonitorPingUI
         public void LoadDataFromJson()
         {
             string path = @"hosts.json";
-            //FileInfo fileInf = new FileInfo(path);
 
             if (File.Exists(path))
                 using (FileStream fs = new FileStream(path, FileMode.Open))
@@ -644,33 +665,64 @@ namespace MonitorPingUI
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            check = true;
+            checkLog = true;
         }
 
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
-            check1 = true;
+            checkLog1 = true;
         }
 
         private void checkBox3_CheckedChanged(object sender, EventArgs e)
         {
-            check2 = true;
+            checkLog2 = true;
         }
 
         private void checkBox4_CheckedChanged(object sender, EventArgs e)
         {
-            check3 = true;
+            checkLog3 = true;
         }
 
         private void checkBox5_CheckedChanged(object sender, EventArgs e)
         {
-            check4 = true;
+            checkLog4 = true;
         }
 
         private void aboutToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             AboutForm aboutform = new AboutForm();
             aboutform.ShowDialog();
+        }
+
+        private void saveListToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SaveDatesToJson();
+        }
+
+        private void enableAlarmInTrayToolStripMenuItem_Click(object sender, EventArgs e)     //Метод Включение-Отключение оповещения в трее
+        {
+            ToolStripMenuItem checkBoxTwo = (ToolStripMenuItem)sender;
+
+            if (checkBoxTwo.Checked == true)
+            {
+                checkBoxTwo.Checked = false;
+                checkAlarm = false;
+                checkAlarm1 = false;
+                checkAlarm2 = false;
+                checkAlarm3 = false;
+                checkAlarm4 = false;
+            }
+            else
+            {
+                checkBoxTwo.Checked = true;
+                checkAlarm = true;
+                checkAlarm1 = true;
+                checkAlarm2 = true;
+                checkAlarm3 = true;
+                checkAlarm4 = true;
+            }
+           
+
         }
     }
 }
